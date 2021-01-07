@@ -51,7 +51,7 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>About me</heading>
               <p>
-                I am Jianhao JIAO, a third-year Ph.D student of <a href="www.ram-lab.com"> RAM-LAB </a> at the Robotics Institute of Hong Kong University of Science and Technology (HKUST),
+                I am Jianhao JIAO, a fourth-year Ph.D student of <a href="www.ram-lab.com"> RAM-LAB </a> at the Robotics Institute of Hong Kong University of Science and Technology (HKUST),
                 supervised by <a href="https://scholar.google.com/citations?user=CdV5LfQAAAAJ&hl=en"> Prof. Ming Liu </a>.
                 I received my B.Eng. from Zhejiang University (ZJU) in 2017.
               </p>
@@ -67,7 +67,13 @@
               <heading>Research</heading>
               <p>
                 My research interest include SLAM, sensor fusion and computer vision.
-                Specifically, I am focusing on their combination to solve calibration, SLAM, and object detection of multi-LiDAR systems for autonomous driving.
+                During my earlier Ph.D phases, I and my coauthors have proposed the 
+                first <b>multi-LiDAR SLAM system</b> with online extrinsic calibration and 
+                <b>multi-LiDAR object detector</b> with the awareness of extrinsic pertrubation.
+              </br>
+                Currently, I am focusing event camera-based visual SLAM and optimization methods for 
+                various estimation problems.
+              </br>
                 Featured research are highlighted, and full publication list is <a href="data/full_publication.md">here</a>.
               </p>
             </td>
@@ -75,6 +81,112 @@
         </table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr onmouseout="font_stop()" onmouseover="font_start()" bgcolor="#ffffd0">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='font_image'><img src='images/jjiao2021greedy.png' width=160px></div>
+                  <img src='images/jjiao2021greedy.png' width=160px>
+                </div>
+                <script type="text/javascript">
+                  function font_start() {
+                    document.getElementById('font_image').style.opacity = "1";
+                  }
+
+                  function font_stop() {
+                    document.getElementById('back_image').style.opacity = "1";
+                  }
+                  font_stop()
+                </script>
+              </td>
+              <td style="padding:20px;padding-top: 25px;width:75%;vertical-align:top">
+                <a href="TODO">
+                  <papertitle>Greedy-Based Feature Selection for Efficient LiDAR SLAM</papertitle>
+                </a>
+                <br>
+                submitted to <em>ICRA</em>, 2021
+                <br>
+                <strong>Jianhao Jiao</strong>, Yilong Zhu, Haoyang Ye, Huaiyang Huang, Peng Yun, Linxin Jiang, Lujia Wang, Ming Liu.
+                <br>
+                <a href="">pdf</a>/
+                <a href="">bibtex</a>/
+                <a href="">video</a>/
+                <a href="https://github.com/gogojjh/M-LOAM">code</a>/
+                <a href="https://ram-lab.com/file/site/m-loam/">project page</a>
+                <br>
+                <p></p>
+              </td>
+            </tr>
+
+            <tr onmouseout="font_stop()" onmouseover="font_start()" bgcolor="#ffffd0">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='font_image'><img src='images/mloam_1.jpg' width=160px></div>
+                  <img src='images/mloam_1.jpg' width=160px>
+                </div>
+                <script type="text/javascript">
+                  function font_start() {
+                    document.getElementById('font_image').style.opacity = "1";
+                  }
+
+                  function font_stop() {
+                    document.getElementById('back_image').style.opacity = "1";
+                  }
+                  font_stop()
+                </script>
+              </td>
+              <td style="padding:20px;padding-top: 25px;width:75%;vertical-align:top">
+                <a href="TODO">
+                  <papertitle>Robust Odometry and Mapping for Multi-LiDAR Systems with Online Extrinsic Calibration</papertitle>
+                </a>
+                <br>
+                conditionally accepted by <em>IEEE TRO</em>, 2021
+                <br>
+                <strong>Jianhao Jiao</strong>, Haoyang Ye, Yilong Zhu, Ming Liu.
+                <br>
+                <a href="https://arxiv.org/abs/2010.14294">pdf</a>/
+                <a href="data/jiao2020robust.bib">bibtex</a>/
+                <a href="https://www.youtube.com/watch?v=qFA_bVkh89Y">video</a>/
+                <a href="https://github.com/gogojjh/M-LOAM">code</a>/
+                <a href="https://ram-lab.com/file/site/m-loam/">project page</a>
+                <br>
+                <p></p>
+              </td>
+            </tr>
+
+            <tr onmouseout="font_stop()" onmouseover="font_start()" bgcolor="#ffffd0">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='font_image'><img src='images/jjiao2020hercules_1.png' width=160px></div>
+                  <img src='images/jjiao2020hercules_1.png' width=160px>
+                </div>
+                <script type="text/javascript">
+                  function font_start() {
+                    document.getElementById('font_image').style.opacity = "1";
+                  }
+
+                  function font_stop() {
+                    document.getElementById('back_image').style.opacity = "1";
+                  }
+                  font_stop()
+                </script>
+              </td>
+              <td style="padding:20px;padding-top: 25px;width:75%;vertical-align:top">
+                <a href="TODO">
+                  <papertitle>Hercules: An Autonomous Logistic Vehicle for Contact-less Goods Transportation During the COVID-19 Outbreak</papertitle>
+                </a>
+                <br>
+                <em>IEEE RAM</em>, 2020
+                <br>
+                Tianyu Liu, Qinghai Liao, etc, <strong>Jianhao Jiao</strong>, Ming Liu.
+                <br>
+                <a href="https://arxiv.org/abs/2004.07480">pdf</a>/
+                <a href="data/liu2020hercules.bib">bibtex</a>/
+                <a href="https://www.youtube.com/watch?v=w_0oG3GIK_g">video</a>/
+                code
+                <br>
+                <p></p>
+              </td>
+            </tr>
 
             <tr onmouseout="font_stop()" onmouseover="font_start()" bgcolor="#ffffd0">
               <td style="padding:20px;width:25%;vertical-align:middle">
@@ -102,10 +214,11 @@
                 <br>
                 <strong>Jianhao Jiao</strong>*, Peng Yun*, Lei Tai, Ming Liu.
                 <br>
-                pdf/
-                bibte/
+                <a href="https://arxiv.org/abs/2010.11702" >pdf</a>/
+                <a href="data/jiao2020mlod.bib">bibtex</a>/
                 <a href="https://www.youtube.com/watch?v=hWDxAeqbCHA">video</a>/
-                code
+                <a href="http://143.89.78.112:5000/sharing/90BpyDIuq">code</a>/
+                <a href="https://ram-lab.com/file/site/mlod/">project page</a>
                 <br>
                 <p></p>
               </td>
@@ -288,18 +401,34 @@
         </tbody>
       </table>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <tbody>
           <tr>
             <td>
               <heading>Service</heading>
               <p>
-                Conference review: <b>IROS</b> 2018, 2019, 2020; <b>ICRA</b> 2018, 2019, 2020; <b>IEEE-IV</b> 2019, 2020; <b>ITSC</b> 2020.
+                Conference review: <b>IROS</b> 2018, 2019, 2020; <b>ICRA</b> 2018, 2019, 2021; <b>IEEE-IV</b> 2019, 2020; <b>ITSC</b> 2020.
                 <br>
                 Journal review: <b>IEEE TITS</b>; <b>IEEE TMech</b>; <b>IEEE RAL</b>.
                 </p>
             </td>
           </tr>
-        </tbody></table>
+        </tbody>
+      </table>
+
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <tbody>
+          <tr>
+            <td>
+              <heading>Some useful slides</heading>
+              <p>
+                <a href="slide/2020_jjiao_literature_review_event_camera.pdf">Survey on event camera-based resource, 2020</a>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
 
         <!--
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
@@ -339,14 +468,28 @@
         </tr>
       </table>
 
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tbody>
+          <tr onmouseout="font_stop()" onmouseover="font_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="miscell">
+                <div class="two" id='font_image'><img src='images/mis_2020_hy_graduate.jpg' width=200px></div>
+              </div>
+            </td>
+            <td style="padding:20px;padding-top: 12px;width:75%;vertical-align:top">
+              <p> 2020 Photo with my group. Congratulation to Dr.Haoyang Ye for his Ph.D defend! </p>
+            </td>
+          </tr>
+      </table>
+
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <tr onmouseout="font_stop()" onmouseover="font_start()">
-          <td style="padding:20px;width:25%;vertical-align:middle">
+          <td style="padding:20px;padding-top:60px;width:25%;vertical-align:middle">
             <div class="miscell">
               <div class="two" id='font_image'><img src='images/mis_2019_banquet.jpg' width=200px></div>
             </div>
           </td>
-          <td style="padding:20px;padding-top: 12px;width:75%;vertical-align:top">
+          <td style="padding:20px;padding-top: 50px;width:75%;vertical-align:top">
             <p> 2019 Banquet with my group. Congratulation to Dr.Lei Tai for his Ph.D defend! </p>
           </td>
         </tr>
