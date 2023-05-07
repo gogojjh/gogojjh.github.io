@@ -2,26 +2,27 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology</a>. 
+subtitle: <b>Research Associate</b> at HKUST <br> <b>Deputy Director</b> at IADC, HKUST(GZ) <br> Robotics, Sensor Fsuion, SLAM, Navigation
+# <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology</a>. 
 
 profile:
   align: right
   image: jianhaojiao_pict.jpeg
-  image_circular: true´ # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   address: >
-    <p>Email: jjiao at connect dot ust dot hk</p>
-    <p>Kowloon, Clear Water Bay</p>
-    <p>Hong Kong, China</p>
+    <p>Hong Kong, 2022</p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
+awards: true
 ---
+I obtained my Ph.D. in Robotics in 2022 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>, under the supervision of Prof.Ming Liu in the <a href="ram-lab.com">Robotics & Multi-Perception Lab</a>.
 
-I received my Ph.D. degree from The Hong Kong University of Science and Technology (HKUST), and I am currently a Research Associate at HKUST. 
-I also serve as a deputy director of HKUST(GZ) <a href=''>Intelligent and Autonomous Driving Center</a> (IADC). 
-I am leading the research group (more than 20 Ph.D. and master students) of IADC covering research topics ranging from sensor fusion, perception, localization, mapping, and navigation.
+I am currently a research associate in the Intelligent and Autonomous Driving Center (IADC). 
+
+I am leading the research group of IADC to enable the full-stack autonomy of autonomous driving covering research topics ranging from sensor fusion, perception, localization, mapping, and navigation. 
 More details regarding my publications, projects, and real-world demonstrations of robots can be found on my Projects & Research.
 
 <!-- I have been leading the autonomous driving group of MSC Lab covering full-stack autonomy from perception and localization to prediction, planning and control, as well as key offline components such as mapping, dataset pipeline, simulation and test. More details regarding my publications, projects and research can be found on my Google Scholar, LinkedIn, Twitter, and Projects & Research. -->
