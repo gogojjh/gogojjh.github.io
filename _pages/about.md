@@ -18,12 +18,12 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 awards: true
 ---
-I obtained my Ph.D. in Robotics in 2022 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>, under the supervision of Prof.Ming Liu in the <a href="ram-lab.com">Robotics & Multi-Perception Lab</a>.
+<!-- I obtained my Ph.D. in Robotics in 2022 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>, under the supervision of Prof.Ming Liu in the <a href="ram-lab.com">Robotics & Multi-Perception Lab</a>.
 
 I am currently a research associate in the Intelligent and Autonomous Driving Center (IADC) which is led by Prof.Ming Liu.
 
-I am leading the SLAM research group of IADC to conduct cutting-edge reesarch covering topics ranging from sensor fusion, perception, localization, mapping, and navigation. 
-More details regarding my publications, projects, and real-world demonstrations of robots can be found on my Projects & Research.
+I am leading the SLAM research group to conduct cutting-edge research covering topics ranging from sensor fusion, perception, localization, mapping, and navigation. 
+More details regarding my publications, projects, and real-world demonstrations of robots can be found on my Projects & Research. -->
 
 <!-- I have been leading the autonomous driving group of MSC Lab covering full-stack autonomy from perception and localization to prediction, planning and control, as well as key offline components such as mapping, dataset pipeline, simulation and test. More details regarding my publications, projects and research can be found on my Google Scholar, LinkedIn, Twitter, and Projects & Research. -->
 <!-- 
