@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <b>Research Associate</b> at HKUST <br> <b>Deputy Director</b> at IADC, HKUST(GZ) <br> Robotics, Sensor Fsuion, SLAM, Navigation
+# subtitle: <b>Research Associate</b> at HKUST <br> <b>Deputy Director</b> at IADC, HKUST(GZ) <br> Mobile Robot, Sensor Fusion, SLAM, Navigation
 # <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology</a>. 
 
 profile:
@@ -18,7 +18,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 awards: true
 ---
-<!-- I obtained my Ph.D. in Robotics in 2022 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>, under the supervision of Prof.Ming Liu in the <a href="ram-lab.com">Robotics & Multi-Perception Lab</a>.
+<!-- I obtained my Ph.D. in Robotics in 2022 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>, under the supervision of <a href="https://scholar.google.com/citations?user=CdV5LfQAAAAJ&hl=zh-TW">Prof.Ming Liu</a> in the <a href="ram-lab.com">Robotics & Multi-Perception Lab</a>.
 
 I am currently a research associate in the Intelligent and Autonomous Driving Center (IADC) which is led by Prof.Ming Liu.
 
