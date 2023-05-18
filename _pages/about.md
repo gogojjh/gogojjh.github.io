@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-# subtitle: <b>Research Associate</b> at HKUST <br> <b>Deputy Director</b> at IADC, HKUST(GZ) <br> Mobile Robot, Sensor Fusion, SLAM, Navigation
+subtitle: <b>Research Associate</b> at HKUST <br> <b>Deputy Director</b> at IADC, HKUST(GZ) <br> Mobile Robot, Sensor Fusion, SLAM, Navigation
 # <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology</a>. 
 
 profile:
@@ -18,12 +18,12 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 awards: true
 ---
-<!-- I obtained my Ph.D. in Robotics in 2022 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>, under the supervision of <a href="https://scholar.google.com/citations?user=CdV5LfQAAAAJ&hl=zh-TW">Prof.Ming Liu</a> in the <a href="ram-lab.com">Robotics & Multi-Perception Lab</a>.
+I obtained my Ph.D. in Robotics in 2021 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>, under the supervision of <a href="https://scholar.google.com/citations?user=CdV5LfQAAAAJ&hl=zh-TW">Prof.Ming Liu</a> in the <a href="ram-lab.com">Robotics & Multi-Perception Lab</a>.
 
 I am currently a research associate in the Intelligent and Autonomous Driving Center (IADC) which is led by Prof.Ming Liu.
 
 I am leading the SLAM research group to conduct cutting-edge research covering topics ranging from sensor fusion, perception, localization, mapping, and navigation. 
-More details regarding my publications, projects, and real-world demonstrations of robots can be found on my Projects & Research. -->
+More details regarding my projects and real-world demonstrations of robots can be found on <a href="projects">Projects & Research</a>.
 
 <!-- I have been leading the autonomous driving group of MSC Lab covering full-stack autonomy from perception and localization to prediction, planning and control, as well as key offline components such as mapping, dataset pipeline, simulation and test. More details regarding my publications, projects and research can be found on my Google Scholar, LinkedIn, Twitter, and Projects & Research. -->
 <!-- 

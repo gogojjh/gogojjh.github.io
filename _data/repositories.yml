@@ -1,12 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - gogojjh
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - HKUSTGZ-IADC/LCECalib
+  - gogojjh/M-LOAM
+  - ram-lab/MLC
+  - ram-lab/lidar_appearance_calibration
