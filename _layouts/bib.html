@@ -242,17 +242,20 @@
 
     {% if entry.preview_video %}
     <div class="col-sm-4 {% if entry.preview_video %}preview_video{% else %}abbr{% endif %}">
-      {%- if entry.preview_video -%}
-      {% if entry.preview_video contains '://' -%}
-      <img class="preview z-depth-1 rounded" src="{{ entry.preview_video }}">
-      {%- else -%}
-      {%- assign entry_path = entry.preview_video | prepend: '/assets/img/publication_preview/' -%}
-      {% include figure.html
-      path=entry_path
-      class="preview z-depth-1 rounded"
-      alt=entry.preview_video -%}
-      {%- endif -%}
-      {%- endif -%}
+      <div class="column">
+        {%- if entry.preview_video -%}
+        {% if entry.preview_video contains '://' -%}
+        <img class="preview z-depth-1 rounded" src="{{ entry.preview_video }}">
+        {%- else -%}
+        {%- assign entry_path = entry.preview_video | prepend: '/assets/img/publication_preview/'
+        -%}
+        {% include figure.html
+        path=entry_path
+        class="preview z-depth-1 rounded"
+        alt=entry.preview_video -%}
+        {%- endif -%}
+        {%- endif -%}
+      </div>
     </div>
     {%- endif -%}
 
