@@ -23,7 +23,7 @@ I am currently a research associate in the Intelligent and Autonomous Driving Ce
 
 I am leading the <b>Robot Navigation</b> group to conduct cutting-edge research covering topics ranging from perception, SLAM, and navigation. 
 More details regarding our projects and real-world demonstrations of robots can be found on <a href="projects">Projects & Research</a>. 
-Please feel free to contact <a href="mailto:jjiao@connect.ust.hk">me</a> if you are interested in our projects and want to collaborate us.
+Please feel free to contact <a href="mailto:jjiao@connect.ust.hk">me</a> if you have questions about our projects and want to collaborate us.
 
 <!-- I have been leading the autonomous driving group of MSC Lab covering full-stack autonomy from perception and localization to prediction, planning and control, as well as key offline components such as mapping, dataset pipeline, simulation and test. More details regarding my publications, projects and research can be found on my Google Scholar, LinkedIn, Twitter, and Projects & Research. -->
 <!-- 
