@@ -5,6 +5,6 @@ inline: true
 related_posts: false
 ---
 
-VIPs visited our lab.
+<!-- VIPs visited our lab. -->
 
 <!-- add image -->

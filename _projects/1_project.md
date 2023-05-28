@@ -22,7 +22,7 @@ However, the multi-LiDAR perception is still an open problem, and few articles d
 The extrinsic calibration of multiple LiDARs is also concerned.
 
 <h2>Problem Statement</h2>
-
+ 
 <h4>Problem Formulation for the Single-LiDAR Case</h4>
 Denoting $$ \mathcal{X} $$ the unknown variable to be estimated given data $$ \mathcal{Z} $$. 
 From the optimization perspective, the optimal $$ \mathcal{X} $$ is estimated by minimizing the **objective function**: 
