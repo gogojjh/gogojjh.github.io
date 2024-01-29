@@ -1,12 +1,12 @@
 <div class="selected_publications">
+  <h3><strong>Perception, Mapping, Navigation</strong></h3>
+  <p></p>
+  {% bibliography -f {{ site.scholar.bibliography }} -q @*[category=true_per_mapping_navigation]* %}
+
   <h3><strong>Calibration, Pose Estimation, Sensor Fusion, SLAM</strong></h3>
   <p></p>
   {% bibliography -f {{ site.scholar.bibliography }} -q
   @*[category=true_calib_pe_sf_slam]* %}
-
-  <h3><strong>Perception, Mapping, Navigation</strong></h3>
-  <p></p>
-  {% bibliography -f {{ site.scholar.bibliography }} -q @*[category=true_per_mapping_navigation]* %}
 
   <h3><strong>Dataset, Application</strong></h3>
   <p></p>
