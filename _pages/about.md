@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <b>Senior Research Fellow</b> at UCL <br>  <br> Mobile Robot, Sensor Fusion, SLAM, Navigation
+subtitle: <b>Senior Research Fellow</b> at University College London (UCL) <br>  <br> Mobile Robot, Sensor Fusion, SLAM, Navigation
 # <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology</a>. 
 
 profile:
@@ -18,12 +18,13 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 awards: true
 ---
-I obtained my Ph.D. in Robotics in 2021 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>, under the supervision of <a href="https://scholar.google.com/citations?user=CdV5LfQAAAAJ&hl=zh-TW">Prof.Ming Liu</a> in the <a href="ram-lab.com">Robotics & Multi-Perception Lab</a>.
 I am currently the senior research fellow in University College London (UCL), Department of Computer Science.
-I work in the <a href="rpl-as-ucl.github.io">Robot Perception and Learning Lab</a> which is led by <a href="">Prof.Dimitrios Kanoulas</a>.
+I work in the <a href="rpl-as-ucl.github.io">Robot Perception and Learning Lab</a> which is led by <a href="https://scholar.google.com/citations?user=cE8_5EsAAAAJ&hl=en">Prof.Dimitrios Kanoulas</a>, cutting-edge research covering topics ranging from perception, SLAM, and navigation on mobile robots.
+
+I obtained my Ph.D. in Robotics in 2021 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>, under the supervision of <a href="https://scholar.google.com/citations?user=CdV5LfQAAAAJ&hl=zh-TW">Prof.Ming Liu</a> in the <a href="ram-lab.com">Robotics & Multi-Perception Lab</a>.
 I was the research associate in the Intelligent and Autonomous Driving Center (IADC) from 2022 to 2023.
-<!-- I am leading the <b>Robot Navigation</b> group to conduct cutting-edge research covering topics ranging from perception, SLAM, and navigation.  -->
-<!-- More details regarding our projects and real-world demonstrations of robots can be found on <a href="projects">Projects & Research</a>.  -->
+
+More details regarding our projects and real-world demonstrations of robots can be found on <a href="projects">Projects & Research</a>. 
 Please feel free to contact <a href="mailto:ucacjji@ucl.ac.uk">me</a> if you have questions about our projects and want to collaborate us.
 
 <!-- I have been leading the autonomous driving group of MSC Lab covering full-stack autonomy from perception and localization to prediction, planning and control, as well as key offline components such as mapping, dataset pipeline, simulation and test. More details regarding my publications, projects and research can be found on my Google Scholar, LinkedIn, Twitter, and Projects & Research. -->
