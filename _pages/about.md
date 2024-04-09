@@ -28,7 +28,7 @@ I was fortunate to collaborate with some excellent researchers, including
 <a href='https://scholar.google.com/citations?user=FxARbSYAAAAJ&hl=en'>Dr.Haoyang Ye</a>, 
 <a href='https://scholar.google.com/citations?user=alRGtgwAAAAJ&hl=en'>Dr.Peng Yun</a>, and
 <a href='https://zarathustr.github.io/'>Mr.Jin Wu</a>.
-I was the research associate in the Intelligent and Autonomous Driving Center (IADC) from 2022 to 2023.
+I was the research associate and Co-PI in the Intelligent and Autonomous Driving Center (IADC) from 2022 to 2023.
 
 More details regarding our projects and real-world demonstrations of robots can be found on <a href="projects">Projects & Research</a>. 
 Please feel free to contact <a href="mailto:jiaojh1994@gmail.com">me</a> if you have questions about our projects and want to collaborate us.
