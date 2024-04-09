@@ -21,13 +21,18 @@ awards: true
 I am currently the senior research fellow in University College London (UCL), Department of Computer Science.
 I work in the <a href="rpl-as-ucl.github.io">Robot Perception and Learning Lab</a> which is led by <a href="https://scholar.google.com/citations?user=cE8_5EsAAAAJ&hl=en">Prof.Dimitrios Kanoulas</a>, cutting-edge research covering topics ranging from perception, SLAM, and navigation on mobile robots.
 
-I obtained my Ph.D. in Robotics in 2021 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>, under the supervision of <a href="https://scholar.google.com/citations?user=CdV5LfQAAAAJ&hl=zh-TW">Prof.Ming Liu</a> in the <a href="ram-lab.com">Robotics & Multi-Perception Lab</a>.
+I obtained my Ph.D. in Robotics in 2021 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>.
+I was fortunate to collaborate with some excellent researchers, including 
+<a href='https://scholar.google.com/citations?user=P5AJTXcAAAAJ&hl=en'>Prof.Rui Fan</a>, 
+<a href='https://scholar.google.com/citations?user=RjOPTHIAAAAJ&hl=en'>Dr.Lei Tai</a>, 
+<a href='https://scholar.google.com/citations?user=FxARbSYAAAAJ&hl=en'>Dr.Haoyang Ye</a>, 
+<a href='https://scholar.google.com/citations?user=alRGtgwAAAAJ&hl=en'>Dr.Peng Yun</a>, and
+<a href='https://zarathustr.github.io/'>Mr.Jin Wu</a>.
 I was the research associate in the Intelligent and Autonomous Driving Center (IADC) from 2022 to 2023.
 
 More details regarding our projects and real-world demonstrations of robots can be found on <a href="projects">Projects & Research</a>. 
-Please feel free to contact <a href="mailto:ucacjji@ucl.ac.uk">me</a> if you have questions about our projects and want to collaborate us.
+Please feel free to contact <a href="mailto:jiaojh1994@gmail.com">me</a> if you have questions about our projects and want to collaborate us.
 
-<!-- I have been leading the autonomous driving group of MSC Lab covering full-stack autonomy from perception and localization to prediction, planning and control, as well as key offline components such as mapping, dataset pipeline, simulation and test. More details regarding my publications, projects and research can be found on my Google Scholar, LinkedIn, Twitter, and Projects & Research. -->
 <!-- 
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
