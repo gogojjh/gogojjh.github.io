@@ -781,6 +781,7 @@ footer.sticky-bottom {
 
       .title {
         font-weight: bolder;
+        font-size: 1.3em;
       }
 
       .author {
@@ -808,6 +809,8 @@ footer.sticky-bottom {
             border-bottom: 1px dashed var(--global-text-color);
           }
         }
+
+        font-size: 1em;
       }
 
       .links {
