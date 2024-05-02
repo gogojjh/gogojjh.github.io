@@ -712,6 +712,10 @@ footer.sticky-bottom {
 }
 .selected_publications ol.bibliography li .title {
   font-weight: bolder;
+  font-size: 1.3em;
+}
+.selected_publications ol.bibliography li .author {
+  font-size: 1em;
 }
 .selected_publications ol.bibliography li .author a {
   border-bottom: 1px dashed var(--global-theme-color);

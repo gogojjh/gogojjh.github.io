@@ -10,9 +10,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>project 5 | Jianhao  Jiao</title>
+    <title>Multi-LiDAR Perception System | Jianhao  Jiao</title>
     <meta name="author" content="Jianhao  Jiao">
-    <meta name="description" content="a project with a background image">
+    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -38,7 +39,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://gogojjh.github.io/projects/5_project/">
+    <link rel="canonical" href="https://gogojjh.github.io/projects/2023_multilidar/">
 
     <!-- Dark Mode -->
     
@@ -122,169 +123,55 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">project 5</h1>
-            <p class="post-description">a project with a background image</p>
+            <h1 class="post-title">Multi-LiDAR Perception System</h1>
+            <p class="post-description"></p>
           </header>
 
           <article>
-            <p>Every project has a beautiful feature showcase page.
-It’s easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.</p>
+            <p><b>TODO:</b></p>
 
-<p>To give your project a background in the portfolio page, just add the img tag to the front matter like so:</p>
+<p>My Ph.D. thesis can be found <a href="xxx">here</a>.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: page
-title: project
-description: a project with a background image
-img: /assets/img/12.jpg
----
-</code></pre></div></div>
+<h2>Motivation</h2>
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+<p>My Ph.D. period mostly focuesd on the multi-LiDAR perception problem. 
+<!-- LiDARs are robust and provide valuable information for navigation.  -->
+At the begining of my Ph.D., I joined in a autonomous golf cart project. Our team achieved many functions, including the SLAM and obstacle detection using only one LiDAR (see Fig.xx).
+However, the limitations of a single LiDAR is also obvious: LiDAR commonly severs from data sparsity, limited FOV, and occlusion.
+This setting cannot provide sufficient perception awareness for a vehicle, where an example is shown in Fig.xxx
+Compared with a single-LiDAR setup, the primary improvement of a multi-LiDAR system is the signi cant enhancement of the sensing range and density of measurements. 
+However, the multi-LiDAR perception is still an open problem, and few articles discuss it. Therefore, I focused on SLAM and object detection, two important tasks in LiDAR perception. 
+The extrinsic calibration of multiple LiDARs is also concerned.</p>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/1-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/1-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/1-1400.webp"></source>
-    
+<h2>Problem Statement</h2>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<h4>Problem Formulation for the Single-LiDAR Case</h4>
+<p>Denoting \(\mathcal{X}\) the unknown variable to be estimated given data \(\mathcal{Z}\). 
+From the optimization perspective, the optimal \(\mathcal{X}\) is estimated by minimizing the <strong>objective function</strong>:</p>
 
-  </picture>
+\[\hat{\mathcal{X}} = \arg\min_{\mathcal{X}}f(\mathcal{X},\mathcal{Z})\]
 
-</figure>
+<h5>SLAM</h5>
+<p>In LiDAR-based SLAM, the variable \(\mathcal{X}\) typically indicates the robot’s poses and \(\mathcal{Z}=\{\mathbf{z}_{k}\}\) represents LiDARs’ feature points. 
+Each measurement can be expressed as a function of \(\mathcal{X}\), i.e.,
+\(\mathbf{z}_{k}=h_{k}(\mathcal{X}) + \epsilon_{k}\), where \(h_{k}(\cdot)\) is the observation model and \(\epsilon_{k}\) is the measurement noise. SLAM is commonly formulated as a MAP estimation problem []. Assume that the noise \(\epsilon_{k}\sim \mathcal{N}(\mathbf{0}, \Sigma_{k})\), the objective is defined as</p>
 
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+\[f(\mathcal{X},\mathcal{Z})\triangleq\sum_{\mathbf{z}_{k}\in\mathcal{Z}}||h_{k}(\mathcal{X}) - \mathbf{z}_{k}||^{2}_{\Sigma_{k}}\]
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/3-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/3-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/3-1400.webp"></source>
-    
+<h5>Object Detection</h5>
+<p>In LiDAR-based object detection tasks, the output is a set of objects’ bounding boxes \(\mathcal{B}\). Each box \(\mathbf{b}\) is parameterized as \([cls, x, y, z, l,, w, h, \gamma]\), 
+where \(cls\) is the class of a bounding box, \([x,y,z]\) denotes a box’s bottom center,
+\([l,w,h]\) represent the sizes along the \(x-\), \(y-\), and \(z-\) axes respectively,
+as well as \(\gamma\) for the rotation of the 3D bounding box along the \(z-\) axis.
+Object detection is a typical pattern recognition problem, which can be solved by \textit{supervised learning} algorithms.
+To make the notation compatible with the computer vision community, I substitute \(\mathcal{X}\) and \(\mathcal{Z}\) with \(\theta\) and \(\mathcal{D}\) respectively.</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/3.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/5-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/5-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/5-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/5-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-<p>You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, <em>bled</em> for your project, and then… you reveal its glory in the next row of images.</p>
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/6-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/6-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/6-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/6.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/11-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/11-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/11-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/11.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-<p>The code is simple.
-Just wrap your images with <code class="language-plaintext highlighter-rouge">&lt;div class="col-sm"&gt;</code> and place them inside <code class="language-plaintext highlighter-rouge">&lt;div class="row"&gt;</code> (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/" rel="external nofollow noopener" target="_blank">Bootstrap Grid</a> system).
-To make images responsive, add <code class="language-plaintext highlighter-rouge">img-fluid</code> class to each; for rounded corners and shadows use <code class="language-plaintext highlighter-rouge">rounded</code> and <code class="language-plaintext highlighter-rouge">z-depth-1</code> classes.
-Here’s the code for the last row of images above:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-sm-center"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
-
+<p>In learing-based methods, \textit{training} and \textit{inference} are two essential stages.
+The training process is to teach a model \(G_{\theta}(\cdot)\) to learn from the \textit{training set} \(\mathcal{D}_{train}\).
+This is done by minimizing the objective function \(f(\theta,\mathcal{Z}_{train})\), where \(\theta\) is the model parameter.
+After getting the parameter \(\hat{\theta}\) that best fits the training set, the model can make predictions of data from the \textit{testing set} \(\mathcal{D}_{test}\),
+i.e., \(\mathcal{B}_{pred}=G_{\hat{\theta}}(\mathcal{D}_{test})\).
+Note that \(\mathcal{D}_{train}\) contains labeled (or called ground-truth) boxes with corresponding object point clouds, while \(\mathcal{D}_{test}\) only consists of raw point clouds.</p>
 
           </article>
 
