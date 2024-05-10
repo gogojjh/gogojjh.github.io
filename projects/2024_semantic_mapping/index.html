@@ -10,10 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Projects &amp; Research | Jianhao  Jiao</title>
+    <title>Semantic Mapping for Navigation | Jianhao  Jiao</title>
     <meta name="author" content="Jianhao  Jiao">
-    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-">
+    <meta name="description" content="xxxx">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -39,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://gogojjh.github.io/projects/">
+    <link rel="canonical" href="https://gogojjh.github.io/projects/2024_semantic_mapping/">
 
     <!-- Dark Mode -->
     
@@ -80,8 +79,8 @@
           
 
           <!-- Other pages -->
-          <li class="nav-item active">
-            <a class="nav-link" href="/projects/">Projects &amp; Research<span class="sr-only">(current)</span></a>
+          <li class="nav-item ">
+            <a class="nav-link" href="/projects/">Projects &amp; Research</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="/publications/">Publications</a>
@@ -123,79 +122,137 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Projects &amp; Research</h1>
-            <p class="post-description"></p>
+            <h1 class="post-title">Semantic Mapping for Navigation</h1>
+            <p class="post-description">xxxx</p>
           </header>
 
           <article>
-            <!-- pages/projects.md -->
-<div class="projects">
-  <!-- Display categorized projects -->
-  <h2 class="category">Research</h2>
-  <!-- Generate cards for each project -->
-  <div class="grid">
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/2023_multilidar/">
-      <div class="card hoverable">
-<figure>
+            <h2 id="real-time-metric-semantic-mapping-for-autonomous-navigation-in-outdoor-environments">Real-Time Metric-Semantic Mapping for Autonomous Navigation in Outdoor Environments</h2>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/12-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/12-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/12-1400.webp"></source>
-    
+<p><strong>Author</strong>: Jianhao Jiao, Ruoyu Geng, Yuanhang Li, Ren Xin, Bowen Yang, Jin Wu,
+Dimitrios Kanoulas, Rui Fan, etc.</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/12.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p><strong>Acknowledgement</strong>: This is a joint research work under the support from HKUST, HKUST(GZ), Tongji University, and University College London.</p>
 
-  </picture>
+<h3 id="demo">Demo</h3>
+<p align="center">
+  <img src="assets/img/2024_tase_mapping/mapping_hkustgz.gif" width="70%">
+  </p>
+<p align="center">The semantic mapping process. </p>
 
-</figure>
+<p align="center">
+  <img src="assets/img/2024_tase_mapping/mapping_result_path_planning_hkustgz.png" width="70%">
+  </p>
+<p align="center">Traversability estimation and motion planning on the resulting occupancy map.</p>
 
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">Multi-LiDAR Perception System</h2>
-          <p class="card-text"></p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/2024_semantic_mapping/">
-      <div class="card hoverable">
-<figure>
+<h3 id="background">Background</h3>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/1-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/1-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/1-1400.webp"></source>
-    
+<p>Mapping is the process of establishing an intnal representation of environments. Metric-semantic maps include human-readable information (<em>i.e.,</em> map elements are labelled), which provideds a better understanding of environments, in constrast to the pure metric map which store geometry of a scene and are usually defined by positions of landmarks (point cloud map), distance to obstacles (distance field), or binary values to indicate free and occupied space (occupancy map). Recent works in scene abstraction (<em>e.g.,</em> <a href="https://github.com/MIT-SPARK/Hydra" rel="external nofollow noopener" target="_blank">Hydra</a>), long-term map update (<em>e.g.,</em> <a href="https://github.com/ethz-asl/panoptic_mapping" rel="external nofollow noopener" target="_blank">Panoptic Mapping</a>), exploration (e.g., <a href="https://devendrachaplot.github.io/projects/semantic-exploration" rel="external nofollow noopener" target="_blank">Semantic Exploration</a>, and grasping (<em>e.g.,</em> <a href="https://theophilegervet.github.io/projects/goat" rel="external nofollow noopener" target="_blank">GOAT</a>) have demonstrated the potential of semantic maps, boosting the development of embodied intelligence.</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/1.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p align="center">
+  <img src="assets/img/2024_tase_mapping/example_hydra.png" width="40%">
+  <img src="assets/img/2024_tase_mapping/example_goat.png" width="50%">
+  <img src="assets/img/2024_tase_mapping/example_panoptic_mapping.png" width="50%">
+  <img src="assets/img/2024_tase_mapping/example_semantic_exploration.png" width="60%">
+</p>
 
-  </picture>
+<p>Taking the KITTI scenario as an example. Many objects such as trees and buildings appear. The street is also composed of the sidewalk that is specifically designed for pedestrains. By incorporating semantics, the map enables the vehicle to navigate along the road, finding a path that is free of collisions and avoids intersecting with sidewalks and grasslands. In contrast, geometry-based traversability extraction methods often face challenges in distinguishing between roads, sidewalks, and grass due to their similar structures. This paper focuses on the point-goal navigation task of ground robots in complicated unstructured environments (<em>e.g.,</em> campus, off-road scenarios), where abundant semantic elements should be recognized to guarantee safe and highly-interactive navigation.</p>
+<p align="center">
+  <img src="assets/img/2024_tase_mapping/example_semantickitti.png" width="60%">
+</p>
 
-</figure>
+<h3 id="methodology">Methodology</h3>
 
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">Semantic Mapping for Navigation</h2>
-          <p class="card-text">xxxx</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-  </div>
-</div>
+<p>The overview of the method is shown as below. Please refer to the preprint for more technical details.</p>
+
+<p align="center">
+  <img src="assets/img/2024_tase_mapping/pipeline.png" width="60%">
+</p>
+
+<h4 id="metric-semantic-mapping">Metric-Semantic Mapping</h4>
+
+<p>Building a semantic map for large-scale outdoor environments costs much time \cite{}. Therefore, in this work, we propose an real-time <strong>metric-semantic mapping system</strong> which leverages LiDAR-visual-inertial sensing to <strong>estimate the real-time state</strong> of the robot and <strong>construct a lighweight and global metric-semantic mesh map</strong> of the environment. We build upon the work of NvBlox \cite{} and thus utilize a <em>signed distance field (SDF)</em>-based representation. This representation offers the advantage of constructing surfaces with sub-voxel resolution, enhancing the accuracy of the map. While the focus of this paper is on mapping outdoor environments, the proposed solution is both extensible and easily adaptable for above applications. The mapping system consists of four primary components:</p>
+
+<ol>
+  <li>
+<strong>State Estimator</strong> modifies the R3LIVE system (an Extended Kalman Filter-based LiDAR-visual-inertial odometry) to estimate real-time sensors’ poses with a local and sparse color point cloud.</li>
+  <li>
+<strong>Semantic Segmentation</strong> is a pre-trained convolutional neural network (CNN) that assigns a class label to every single pixel of each input image. A novel dataset that categorizes objects into diverse classes for the network training is also developed.</li>
+  <li>
+<strong>Metric-Semantic Mapping</strong> takes sensors’ measurements and poses as input, and constructs a 3D global mesh of environments using the implicit SDF-based volumetric representation with semantic annotations from the 2D pixel-wise segmentation. The whole pipeline is implemented in parallel with the GPU and thus achieves the real-time performance (&lt;<em>7ms</em> per LiDAR frame). We further propose a non-projective distance under the TSDF formulation, leading to a more accurate and complete surface reconstruction.</li>
+  <li>
+<strong>Traversability Analysis</strong> identifies drivable areas by analyzing the geometric and semantic attributes of the resulting mesh map, thus narrowing the search space for subsequent motion planning. For example, we can classify ‘‘road’’ regions as drivable for vehicles, while ‘‘sidewalk’’ or ‘‘grass’’ regions are not.</li>
+</ol>
+
+<p>We publicly release our code and datasets here: https://github.com/HKUSTGZ-IADC/cobra.</p>
+
+<h4 id="navigation-system-integration">Navigation System Integration</h4>
+
+<p>We also integrate the resuting map into a navigation system for a real-world autonomous vehicle. The semantic data encoded in the map translates human instructions, thereby enabling robots to navigate safely within unstructured environments. Implementation details are summarized:</p>
+
+<ul>
+  <li>
+<strong>Prior Map-based Localization</strong>: We use <a href="https://arxiv.org/abs/2401.17826" rel="external nofollow noopener" target="_blank">PALoc</a> to obtain the real-time global pose of the vehicle by registering the map of the current scan.</li>
+  <li>
+<strong>Map Process and Motion Planning</strong>: We project the vertices of the above traversable map onto a 2D occupancy grid map. Each grid cell is drivable if its associated ‘‘occupancy probability’’ is zero. To compute a collision-free and optimal global trajectory from an initial point to a specified goal, we utilize the search-based hybrid A* algorithm. This algorithm incorporates heuristics while accommodating the vehicle’s nonholonomic constraints, enabling the genera-tion of viable and smooth trajectories.</li>
+  <li>
+<strong>Path Following</strong>: A series of equidistant waypoints is discretized from the resultant path, which is then used to guide the vehicle through a lateral trajectory tracking controller (for steering adjustments) and a longitudinal speed controller (for speed changes).</li>
+</ul>
+
+<h3 id="experimental-results">Experimental Results</h3>
+
+<h4 id="dataset">Dataset</h4>
+
+<ul>
+  <li>
+<strong>SemanticKITTI</strong>: street and urban road with GT LiDAR semantics</li>
+  <li>
+<strong>SemanticUSL</strong>: campus-type and off-road scenarios with GT LiDAR semantics</li>
+  <li>
+<strong>FusionPortable</strong>: campus-type scenarios with estimated camera semantics (only applied to the Campus_Road sequence)</li>
+</ul>
+
+<h4 id="real-world-experimental-platform">Real-World Experimental Platform</h4>
+
+<p align="center">
+  <img src="assets/img/2024_tase_mapping/experiment_platform.png" width="50%">
+  </p>
+<p align="center">Real-world experimental platform.</p>
+
+<h4 id="some-mapping-results">Some Mapping Results</h4>
+
+<p align="center">
+  &lt;img src="assets/img/2024_tase_mapping/mapping_semantickitti.gif" width=70%" /&gt;
+  </p>
+<p align="center">Test on SemanticKITTI</p>
+
+<p align="center">
+  <img src="assets/img/2024_tase_mapping/mapping_fusionportable.gif" width="70%">
+  </p>
+<p align="center">Test on FusionPortable</p> 
+
+
+<h4 id="real-world-navigation-results">Real-World Navigation Results</h4>
+
+<p align="center">
+  <img src="assets/img/2024_tase_mapping/navigation_experiment_sequence00.gif" width="70%">
+	</p>
+<p align="center">Point-goal navigation test</p>
+
+<p align="center">
+  <img src="assets/img/2024_tase_mapping/navigation_experiment_other_sequence.gif" width="70%">
+  </p>
+<p align="center">Other point-goal navigation tests</p>
+
+
+<h4 id="more-results">More Results</h4>
+<p>To demonstrate the effects of concerning the impact of measurement noise, varying view angles, and limited observations on mapping, we have conducted a series of supplementary experiments using the MaiCity dataset sequence 01, as compared with baseline methods.</p>
+<p align="center">
+  <img src="assets/img/2024_tase_mapping/2024_tase_comp_table.png" width="70%">
+</p>
+<h3 id="citation">Citation</h3>
+
+<p>TBD</p>
 
           </article>
 
