@@ -50,7 +50,7 @@ The overview of the method is shown as below. Please refer to the preprint for m
 #### Metric-Semantic Mapping
 
 Building a semantic map for large-scale outdoor environments costs much time. Therefore, in this work, we propose an real-time **metric-semantic mapping system** which leverages LiDAR-visual-inertial sensing to **estimate the real-time state** of the robot and **construct a lighweight and global metric-semantic mesh map** of the environment. We build upon the work of [NvBlox](https://github.com/nvidia-isaac/nvblox) and thus utilize a *signed distance field (SDF)*-based representation. This representation offers the advantage of constructing surfaces with sub-voxel resolution, enhancing the accuracy of the map. While the focus of this paper is on mapping outdoor environments, the proposed solution is both extensible and easily adaptable for above applications.
-We publicly release our code and datasets here: https://github.com/HKUSTGZ-IADC/cobra.
+We publicly release our code and datasets in [Cobra](https://github.com/HKUSTGZ-IADC/cobra).
 The mapping system consists of four primary components:
 
 1. **State Estimator** modifies the [R3LIVE](https://github.com/hku-mars/r3live) system (an Extended Kalman Filter-based LiDAR-visual-inertial odometry) to estimate real-time sensors’ poses with a local and sparse color point cloud. 
@@ -86,6 +86,7 @@ We also integrate the resuting map into a navigation system for a real-world aut
   <img src="/assets/img/2024_tase_mapping/mapping_semantickitti.gif" width=70%" />
   <p align="center">Test on SemanticKITTI</p>
 </p>
+
 <p align="center">
   <img src="/assets/img/2024_tase_mapping/mapping_fusionportable.gif" width="70%" />
   <p align="center">Test on FusionPortable</p> 
