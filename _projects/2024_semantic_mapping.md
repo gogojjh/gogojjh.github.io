@@ -17,11 +17,11 @@ Dimitrios Kanoulas, Rui Fan, etc.
 
 ### Demo
 <p align="center">
-  <img src="/assets/img/project_preview/2024_tase_mapping/mapping_hkustgz.gif" width="70%" />
+  <img src="/assets/img/2024_tase_mapping/mapping_hkustgz.gif" width="70%" />
   <p align="center">The semantic mapping process. </p>
 </p>
 <p align="center">
-  <img src="/assets/img/project_preview/2024_tase_mapping/mapping_result_path_planning_hkustgz.png" width="70%" />
+  <img src="/assets/img/2024_tase_mapping/mapping_result_path_planning_hkustgz.png" width="70%" />
   <p align="center">Traversability estimation and motion planning on the resulting occupancy map.</p>
 </p>
 
@@ -30,15 +30,15 @@ Mapping is the process of establishing an internal representation of environment
 Recent works (shwon below) in scene abstraction (*e.g.,* [Hydra](https://github.com/MIT-SPARK/Hydra)), long-term map update (*e.g.,* [Panoptic Mapping](https://github.com/ethz-asl/panoptic_mapping)), exploration (*e.g.,* [Semantic Exploration](https://devendrachaplot.github.io/projects/semantic-exploration), and grasping (*e.g.,* [GOAT](https://theophilegervet.github.io/projects/goat)) have demonstrated the potential of semantic maps, boosting the development of embodied intelligence.
 
 <p align="center">
-  <img src="/assets/img/project_preview/2024_tase_mapping/example_hydra.png" width="40%" />
-  <img src="/assets/img/project_preview/2024_tase_mapping/example_goat.png" width="50%" />
-  <img src="/assets/img/project_preview/2024_tase_mapping/example_panoptic_mapping.png" width="50%" />
-  <img src="/assets/img/project_preview/2024_tase_mapping/example_semantic_exploration.png" width="60%" />
+  <img src="/assets/img/2024_tase_mapping/example_hydra.png" width="40%" />
+  <img src="/assets/img/2024_tase_mapping/example_goat.png" width="50%" />
+  <img src="/assets/img/2024_tase_mapping/example_panoptic_mapping.png" width="50%" />
+  <img src="/assets/img/2024_tase_mapping/example_semantic_exploration.png" width="60%" />
 </p>
 
 Taking the KITTI scenario as an example. Many objects such as trees and buildings appear. The street is also composed of the sidewalk that is specifically designed for pedestrains. By incorporating semantics, the map enables the vehicle to navigate along the road, finding a path that is free of collisions and avoids intersecting with sidewalks and grasslands. In contrast, geometry-based traversability extraction methods often face challenges in distinguishing between roads, sidewalks, and grass due to their similar structures. This paper focuses on the point-goal navigation task of ground robots in complicated unstructured environments (*e.g.,* campus, off-road scenarios), where abundant semantic elements should be recognized to guarantee safe and highly-interactive navigation. 
 <p align="center">
-  <img src="/assets/img/project_preview/2024_tase_mapping/example_semantickitti.png" width="60%" />
+  <img src="/assets/img/2024_tase_mapping/example_semantickitti.png" width="60%" />
 </p>
 
 ### Methodology
@@ -46,7 +46,7 @@ Taking the KITTI scenario as an example. Many objects such as trees and building
 The overview of the method is shown as below. Please refer to the preprint for more technical details.
 
 <p align="center">
-  <img src="/assets/img/project_preview/2024_tase_mapping/pipeline.png" width="60%" />
+  <img src="/assets/img/2024_tase_mapping/pipeline.png" width="60%" />
 </p>
 
 #### Metric-Semantic Mapping
@@ -79,35 +79,35 @@ We also integrate the resuting map into a navigation system for a real-world aut
 #### Real-World Experimental Platform
 
 <p align="center">
-  <img src="/assets/img/project_preview/2024_tase_mapping/experiment_platform.png" width="50%" />
+  <img src="/assets/img/2024_tase_mapping/experiment_platform.png" width="50%" />
   <p align="center">Real-world experimental platform.</p>
 </p>
 #### Some Mapping Results
 
 <p align="center">
-  <img src="/assets/img/project_preview/2024_tase_mapping/mapping_semantickitti.gif" width=70%" />
+  <img src="/assets/img/2024_tase_mapping/mapping_semantickitti.gif" width=70%" />
   <p align="center">Test on SemanticKITTI</p>
 </p>
 <p align="center">
-  <img src="/assets/img/project_preview/2024_tase_mapping/mapping_fusionportable.gif" width="70%" />
+  <img src="/assets/img/2024_tase_mapping/mapping_fusionportable.gif" width="70%" />
   <p align="center">Test on FusionPortable</p> 
 </p>
 
 #### Real-World Navigation Results
 
 <p align="center">
-  <img src="/assets/img/project_preview/2024_tase_mapping/navigation_experiment_sequence00.gif" width="70%" />
+  <img src="/assets/img/2024_tase_mapping/navigation_experiment_sequence00.gif" width="70%" />
 	<p align="center">Point-goal navigation test</p>
 </p>
 <p align="center">
-  <img src="/assets/img/project_preview/2024_tase_mapping/navigation_experiment_other_sequence.gif" width="70%" />
+  <img src="/assets/img/2024_tase_mapping/navigation_experiment_other_sequence.gif" width="70%" />
   <p align="center">Other point-goal navigation tests</p>
 </p>
 
 #### More Results
 To demonstrate the effects of concerning the impact of measurement noise, varying view angles, and limited observations on mapping, we have conducted a series of supplementary experiments using the MaiCity dataset sequence 01, as compared with baseline methods.
 <p align="center">
-  <img src="/assets/img/project_preview/2024_tase_mapping/2024_tase_comp_table.png" width="70%" />
+  <img src="/assets/img/2024_tase_mapping/2024_tase_comp_table.png" width="70%" />
 </p>
 
 ### Citation
