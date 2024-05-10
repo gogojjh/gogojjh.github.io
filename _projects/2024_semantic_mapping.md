@@ -49,14 +49,14 @@ The overview of the method is shown as below. Please refer to the preprint for m
 
 #### Metric-Semantic Mapping
 
-Building a semantic map for large-scale outdoor environments costs much time. Therefore, in this work, we propose an real-time **metric-semantic mapping system** which leverages LiDAR-visual-inertial sensing to **estimate the real-time state** of the robot and **construct a lighweight and global metric-semantic mesh map** of the environment. We build upon the work of NvBlox and thus utilize a *signed distance field (SDF)*-based representation. This representation offers the advantage of constructing surfaces with sub-voxel resolution, enhancing the accuracy of the map. While the focus of this paper is on mapping outdoor environments, the proposed solution is both extensible and easily adaptable for above applications. The mapping system consists of four primary components:
+Building a semantic map for large-scale outdoor environments costs much time. Therefore, in this work, we propose an real-time **metric-semantic mapping system** which leverages LiDAR-visual-inertial sensing to **estimate the real-time state** of the robot and **construct a lighweight and global metric-semantic mesh map** of the environment. We build upon the work of [NvBlox](https://github.com/nvidia-isaac/nvblox) and thus utilize a *signed distance field (SDF)*-based representation. This representation offers the advantage of constructing surfaces with sub-voxel resolution, enhancing the accuracy of the map. While the focus of this paper is on mapping outdoor environments, the proposed solution is both extensible and easily adaptable for above applications.
+We publicly release our code and datasets here: https://github.com/HKUSTGZ-IADC/cobra.
+The mapping system consists of four primary components:
 
 1. **State Estimator** modifies the [R3LIVE](https://github.com/hku-mars/r3live) system (an Extended Kalman Filter-based LiDAR-visual-inertial odometry) to estimate real-time sensors’ poses with a local and sparse color point cloud. 
 2. **Semantic Segmentation** is a pre-trained convolutional neural network (CNN) that assigns a class label to every single pixel of each input image. A novel dataset that categorizes objects into diverse classes for the network training is also developed.
-3. **Metric-Semantic Mapping** takes sensors’ measurements and poses as input, and constructs a 3D global mesh of environments using the implicit SDF-based volumetric representation with semantic annotations from the 2D pixel-wise segmentation. The whole pipeline is implemented in parallel with the GPU and thus achieves the real-time performance (<*7ms* per LiDAR frame). We further propose a non-projective distance under the TSDF formulation, leading to a more accurate and complete surface reconstruction.
+3. **Metric-Semantic Mapping** takes sensors’ measurements and poses as input, and constructs a 3D global mesh of environments using the TSDF-based volumetric representation with 2D semantic segmentation. The mapping is implemented in parallel with the GPU and thus achieves the real-time performance (<*7ms* per LiDAR frame). We also propose a non-projective distance under the TSDF formulation, leading to a more accurate and complete surface reconstruction.
 4. **Traversability Analysis** identifies drivable areas by analyzing the geometric and semantic attributes of the resulting mesh map, thus narrowing the search space for subsequent motion planning. For example, we can classify ''road'' regions as drivable for vehicles, while ''sidewalk'' or ''grass'' regions are not.
-
-We publicly release our code and datasets here: https://github.com/HKUSTGZ-IADC/cobra.
 
 #### Navigation System Integration
 
@@ -67,12 +67,12 @@ We also integrate the resuting map into a navigation system for a real-world aut
 * **Path Following**: Waypoints are taken as input of the further path following module with the lateral trajectory tracking controller (for steering adjustments) and a longitudinal speed controller (for speed changes).
 
 ### Experimental Results
-
+<!-- 
 #### Dataset
 
 * **SemanticKITTI**: street and urban road with GT LiDAR semantics.
 * **SemanticUSL**: campus-type and off-road scenarios with GT LiDAR semantics.
-* **FusionPortable**: campus-type scenarios with estimated camera semantics.
+* **FusionPortable**: campus-type scenarios with estimated camera semantics. -->
 
 #### Real-World Experimental Platform
 
@@ -80,8 +80,8 @@ We also integrate the resuting map into a navigation system for a real-world aut
   <img src="/assets/img/2024_tase_mapping/experiment_platform.png" width="50%" />
   <p align="center">Real-world experimental platform.</p>
 </p>
-#### Some Mapping Results
 
+#### Some Mapping Results
 <p align="center">
   <img src="/assets/img/2024_tase_mapping/mapping_semantickitti.gif" width=70%" />
   <p align="center">Test on SemanticKITTI</p>
