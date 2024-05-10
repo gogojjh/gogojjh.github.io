@@ -173,7 +173,9 @@ Recent works (shwon below) in scene abstraction (<em>e.g.,</em> <a href="https:/
 
 <h4 id="metric-semantic-mapping">Metric-Semantic Mapping</h4>
 
-<p>Building a semantic map for large-scale outdoor environments costs much time. Therefore, in this work, we propose an real-time <strong>metric-semantic mapping system</strong> which leverages LiDAR-visual-inertial sensing to <strong>estimate the real-time state</strong> of the robot and <strong>construct a lighweight and global metric-semantic mesh map</strong> of the environment. We build upon the work of NvBlox and thus utilize a <em>signed distance field (SDF)</em>-based representation. This representation offers the advantage of constructing surfaces with sub-voxel resolution, enhancing the accuracy of the map. While the focus of this paper is on mapping outdoor environments, the proposed solution is both extensible and easily adaptable for above applications. The mapping system consists of four primary components:</p>
+<p>Building a semantic map for large-scale outdoor environments costs much time. Therefore, in this work, we propose an real-time <strong>metric-semantic mapping system</strong> which leverages LiDAR-visual-inertial sensing to <strong>estimate the real-time state</strong> of the robot and <strong>construct a lighweight and global metric-semantic mesh map</strong> of the environment. We build upon the work of <a href="https://github.com/nvidia-isaac/nvblox" rel="external nofollow noopener" target="_blank">NvBlox</a> and thus utilize a <em>signed distance field (SDF)</em>-based representation. This representation offers the advantage of constructing surfaces with sub-voxel resolution, enhancing the accuracy of the map. While the focus of this paper is on mapping outdoor environments, the proposed solution is both extensible and easily adaptable for above applications.
+We publicly release our code and datasets here: https://github.com/HKUSTGZ-IADC/cobra.
+The mapping system consists of four primary components:</p>
 
 <ol>
   <li>
@@ -181,12 +183,10 @@ Recent works (shwon below) in scene abstraction (<em>e.g.,</em> <a href="https:/
   <li>
 <strong>Semantic Segmentation</strong> is a pre-trained convolutional neural network (CNN) that assigns a class label to every single pixel of each input image. A novel dataset that categorizes objects into diverse classes for the network training is also developed.</li>
   <li>
-<strong>Metric-Semantic Mapping</strong> takes sensors’ measurements and poses as input, and constructs a 3D global mesh of environments using the implicit SDF-based volumetric representation with semantic annotations from the 2D pixel-wise segmentation. The whole pipeline is implemented in parallel with the GPU and thus achieves the real-time performance (&lt;<em>7ms</em> per LiDAR frame). We further propose a non-projective distance under the TSDF formulation, leading to a more accurate and complete surface reconstruction.</li>
+<strong>Metric-Semantic Mapping</strong> takes sensors’ measurements and poses as input, and constructs a 3D global mesh of environments using the TSDF-based volumetric representation with 2D semantic segmentation. The mapping is implemented in parallel with the GPU and thus achieves the real-time performance (&lt;<em>7ms</em> per LiDAR frame). We also propose a non-projective distance under the TSDF formulation, leading to a more accurate and complete surface reconstruction.</li>
   <li>
 <strong>Traversability Analysis</strong> identifies drivable areas by analyzing the geometric and semantic attributes of the resulting mesh map, thus narrowing the search space for subsequent motion planning. For example, we can classify ‘‘road’’ regions as drivable for vehicles, while ‘‘sidewalk’’ or ‘‘grass’’ regions are not.</li>
 </ol>
-
-<p>We publicly release our code and datasets here: https://github.com/HKUSTGZ-IADC/cobra.</p>
 
 <h4 id="navigation-system-integration">Navigation System Integration</h4>
 
@@ -202,17 +202,12 @@ Recent works (shwon below) in scene abstraction (<em>e.g.,</em> <a href="https:/
 </ul>
 
 <h3 id="experimental-results">Experimental Results</h3>
+<!-- 
+#### Dataset
 
-<h4 id="dataset">Dataset</h4>
-
-<ul>
-  <li>
-<strong>SemanticKITTI</strong>: street and urban road with GT LiDAR semantics.</li>
-  <li>
-<strong>SemanticUSL</strong>: campus-type and off-road scenarios with GT LiDAR semantics.</li>
-  <li>
-<strong>FusionPortable</strong>: campus-type scenarios with estimated camera semantics.</li>
-</ul>
+* **SemanticKITTI**: street and urban road with GT LiDAR semantics.
+* **SemanticUSL**: campus-type and off-road scenarios with GT LiDAR semantics.
+* **FusionPortable**: campus-type scenarios with estimated camera semantics. -->
 
 <h4 id="real-world-experimental-platform">Real-World Experimental Platform</h4>
 
@@ -221,8 +216,8 @@ Recent works (shwon below) in scene abstraction (<em>e.g.,</em> <a href="https:/
   </p>
 <p align="center">Real-world experimental platform.</p>
 
-<h4 id="some-mapping-results">Some Mapping Results</h4>
 
+<h4 id="some-mapping-results">Some Mapping Results</h4>
 <p align="center">
   &lt;img src="/assets/img/2024_tase_mapping/mapping_semantickitti.gif" width=70%" /&gt;
   </p>
