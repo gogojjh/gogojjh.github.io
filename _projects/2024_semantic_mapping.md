@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Semantic Mapping for Navigation
-description: Description
-img: assets/img/project_preview_2024_tase_mapping/example_semantickitti.png
+img: /assets/img/project_preview_2024_tase_mapping/example_semantickitti.png
 importance: 2
 category: Research
 horizontal: false
