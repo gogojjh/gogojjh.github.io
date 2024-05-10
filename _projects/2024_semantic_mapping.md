@@ -1,4 +1,3 @@
-```markdown
 ---
 layout: page
 title: Semantic Mapping for Navigation
@@ -8,8 +7,6 @@ importance: 2
 category: Research
 horizontal: false
 ---
-
-```
 
 ## Real-Time Metric-Semantic Mapping for Autonomous Navigation in Outdoor Environments
 
