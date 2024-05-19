@@ -10,6 +10,8 @@ horizontal: false
 
 The number of attendance of ICRA has rapidly growed. And I have seen a significant transition of hotpot.
 This blog will show some interesting products from industry, covering data collection device, legged robot, mobile-manipulation robot, and so on.
+We have witnessed the transition in robot. 
+This page wants to show interesting things.
 
 ### Recording
 #### Gundam
@@ -44,6 +46,11 @@ This blog will show some interesting products from industry, covering data colle
 </p>
 
 <p align="center">
+  <img src="/assets/img/2024_icra_industry/cute_robot.gif" width="55%" />
+  Very cute design!
+</p>
+
+<p align="center">
   <img src="/assets/img/2024_icra_industry/deep_robotics.gif" width="55%" />
   Deep Robotics
 </p>
@@ -52,6 +59,7 @@ This blog will show some interesting products from industry, covering data colle
   <img src="/assets/img/2024_icra_industry/unitree_handstand.gif" width="55%" />
   Unitree
 </p>
+Unitree just announced their new product on [humanoid robot](https://www.unitree.com/cn/g1).
 
 ## Unsolved Questions
 <!--
