@@ -7,11 +7,7 @@ horizontal: false
 ---
 
 ## ICRA 2024, 13 May - 17 May, Yokohama, Japan
-
-The number of attendance of ICRA has rapidly growed. And I have seen a significant transition of hotpot.
-This blog will show some interesting products from industry, covering data collection device, legged robot, mobile-manipulation robot, and so on.
-We have witnessed the transition in robot. 
-This page wants to show interesting things.
+In this blog, I will shown some intriguing products from the industry, including data collection devices, legged robots, mobile manipulation robots, and more. 
 
 ### Recording
 #### Gundam!
