@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ICRA 2024 Record - Exhibition
+title: ICRA 2024 - Exhibition
 img: /assets/img/2024_icra_industry/cover_icra_2024.jpg
 category: Research
 horizontal: false
