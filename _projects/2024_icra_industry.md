@@ -18,8 +18,7 @@ This blog will show some interesting products from industry, covering data colle
   <img src="/assets/img/2024_icra_industry/ganda2.jpg" width="30%" />
 </p>
 
-#### Others
-
+#### Other Show
 <p align="center">
   <img src="/assets/img/2024_icra_industry/handheld_device.jpg" width="55%" />
   <img src="/assets/img/2024_icra_industry/human_tracking.jpg" width="55%" />
