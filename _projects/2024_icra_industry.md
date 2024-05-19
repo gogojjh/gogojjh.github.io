@@ -1,8 +1,9 @@
 ---
 layout: page
-title: ICRA 2024-Industry Record
-img: /assets/img/2024_icra_industry/cover.png
-category: Blog
+title: ICRA 2024 Record (Industry)
+img: /assets/img/2024_icra_industry/cover_icra_2024.jpg
+category: Research
+
 horizontal: false
 ---
 
@@ -11,28 +12,52 @@ horizontal: false
 The number of attendance of ICRA has rapidly growed. And I have seen a significant transition of hotpot.
 This blog will show some interesting products from industry, covering data collection device, legged robot, mobile-manipulation robot, and so on.
 
-## 
+### Recording
+#### Gundam
+<p align="center">
+  <img src="/assets/img/2024_icra_industry/ganda.jpg" width="52%" />
+  <img src="/assets/img/2024_icra_industry/ganda2.jpg" width="30%" />
+</p>
+
+#### Others
+
+<p align="center">
+  <img src="/assets/img/2024_icra_industry/handheld_device.jpg" width="55%" />
+  <img src="/assets/img/2024_icra_industry/human_tracking.jpg" width="55%" />
+  <img src="/assets/img/2024_icra_industry/vehicle.jpg" width="55%" />
+  <img src="/assets/img/2024_icra_industry/rizon.jpg" width="55%" />
+  <p align="center">Manipulation</p>
+<p>
+<p align="center">
+  <img src="/assets/img/2024_icra_industry/kaleido.jpg" width="55%" />
+  <img src="/assets/img/2024_icra_industry/leju.jpg" width="55%" />
+  <img src="/assets/img/2024_icra_industry/nyokke.jpg" width="55%" />
+  <img src="/assets/img/2024_icra_industry/picking.jpg" width="55%" />
+  <img src="/assets/img/2024_icra_industry/seenpin.jpg" width="55%" />
+  <img src="/assets/img/2024_icra_industry/unitree_handstand.jpg" width="55%" />
+  <img src="/assets/img/2024_icra_industry/unitree_human_robot.jpg" width="55%" />
+  <img src="/assets/img/2024_icra_industry/torobo.png" width="55%" />
+</p>
+
+#### Demo
+<p align="center">
+  <img src="/assets/img/2024_icra_industry/human_tracking_robot.gif" width="55%" />
+  Human Tracking Robot
+</p>
+
+<p align="center">
+  <img src="/assets/img/2024_icra_industry/deep_robotics.gif" width="55%" />
+  Deep Robotics
+</p>
+
+<p align="center">
+  <img src="/assets/img/2024_icra_industry/unitree_handstand.gif" width="55%" />
+  Unitree
+</p>
 
 ## Unsolved Questions
+<!--
 1. Boundary of products and research
 2. Commerialization
 3. TBD
-
-
-<!-- ### Demo
-<p align="center">
-  <img src="/assets/img/2024_tase_mapping/mapping_hkustgz.gif" width="70%" />
-  <p align="center">The semantic mapping process. </p>
-</p>
-<p align="center">
-  <img src="/assets/img/2024_tase_mapping/mapping_result_path_planning_hkustgz.png" width="70%" />
-  <p align="center">Traversability estimation and motion planning on the resulting occupancy map.</p>
-</p>
-
-
-<p align="center">
-  <img src="/assets/img/2024_tase_mapping/example_hydra.png" width="40%" />
-  <img src="/assets/img/2024_tase_mapping/example_goat.png" width="50%" />
-  <img src="/assets/img/2024_tase_mapping/example_panoptic_mapping.png" width="50%" />
-  <img src="/assets/img/2024_tase_mapping/example_semantic_exploration.png" width="70%" />
-</p> -->
+-->
