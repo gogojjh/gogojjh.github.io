@@ -14,7 +14,7 @@ We have witnessed the transition in robot.
 This page wants to show interesting things.
 
 ### Recording
-#### Gundam
+#### Gundam!
 <p align="center">
   <img src="/assets/img/2024_icra_industry/ganda.jpg" width="52%" />
   <img src="/assets/img/2024_icra_industry/ganda2.jpg" width="30%" />
@@ -25,9 +25,13 @@ This page wants to show interesting things.
   <img src="/assets/img/2024_icra_industry/handheld_device.jpg" width="55%" />
   <img src="/assets/img/2024_icra_industry/human_tracking.jpg" width="55%" />
   <img src="/assets/img/2024_icra_industry/vehicle.jpg" width="55%" />
+</p>
+
+<p align="center>
   <img src="/assets/img/2024_icra_industry/rizon.jpg" width="55%" />
   <p align="center">Manipulation</p>
-<p>
+</p>
+
 <p align="center">
   <img src="/assets/img/2024_icra_industry/kaleido.jpg" width="55%" />
   <img src="/assets/img/2024_icra_industry/leju.jpg" width="55%" />
@@ -40,6 +44,7 @@ This page wants to show interesting things.
 </p>
 
 #### Demo
+
 <p align="center">
   <img src="/assets/img/2024_icra_industry/human_tracking_robot.gif" width="55%" />
   <p align="center">Human Tracking Robot</p>
@@ -57,11 +62,11 @@ This page wants to show interesting things.
 
 <p align="center">
   <img src="/assets/img/2024_icra_industry/unitree_handstand.gif" width="55%" />
-  <p align="center">Unitree</p>
+  <p align="center">Unitree legged robot. And Unitree just announced their new product on [humanoid robot](https://www.unitree.com/cn/g1), very impressive!
 </p>
-Unitree just announced their new product on [humanoid robot](https://www.unitree.com/cn/g1). Very impressive!
 
 ## Unsolved Questions
+
 <!--
 1. Boundary of products and research
 2. Commerialization
