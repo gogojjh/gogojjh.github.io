@@ -3,7 +3,6 @@ layout: page
 title: ICRA 2024 Record (Industry)
 img: /assets/img/2024_icra_industry/cover_icra_2024.jpg
 category: Research
-
 horizontal: false
 ---
 
