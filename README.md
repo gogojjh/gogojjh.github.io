@@ -1,19 +1,17 @@
 ## Installation
 1. Install Ruby version > 3.0:
 ```
-wget https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.0.tar.gz
-tar -zxvf ruby-3.3.0.tar.gz
+wget https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.0.tar.gz && tar -zxvf ruby-3.3.0.tar.gz && \
 cd ruby-3.3.0 && ./configure && make && sudo make install
 ```
 2. Install RubyGems
 ```
-wget https://rubygems.org/rubygems/rubygems-3.5.5.tgz
-tar -zxvf rubygems-3.5.5.tgz
+wget https://rubygems.org/rubygems/rubygems-3.5.5.tgz && tar -zxvf rubygems-3.5.5.tgz && \
 cd rubygems-3.5.5 && sudo ruby setup.rb
 ```
 3. Bundle
 ```
-bundle install
+bundle install --path /Rocket_ssd/gems
 bundle exec jekyll serve --lsi
 ```
 
