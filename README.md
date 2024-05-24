@@ -11,7 +11,7 @@ cd rubygems-3.5.5 && sudo ruby setup.rb
 ```
 3. Bundle
 ```
-bundle install
+bundle install --path /Rocket_ssd/gems
 bundle exec jekyll serve --lsi
 ```
 

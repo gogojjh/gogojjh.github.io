@@ -2,10 +2,9 @@
 layout: page
 title: Multi-LiDAR Perception System
 description: 
-img: assets/img/12.jpg
-importance: 1
 category: Research
-period: xxx
+img: assets/img/publication_preview/iros_2019_calib_preview.png
+importance: 2
 ---
 
 <b>TODO:</b> 

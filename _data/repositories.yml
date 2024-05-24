@@ -2,6 +2,8 @@ github_users:
   - gogojjh
 
 github_repos:
+  - MetaSLAM/GPRS_Survey
+  - fusionportable/fusionportable_dataset_tools
   - HKUSTGZ-IADC/LCECalib
   - gogojjh/M-LOAM
   - ram-lab/MLC

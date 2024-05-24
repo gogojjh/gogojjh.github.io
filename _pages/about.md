@@ -19,7 +19,9 @@ social: true  # includes social icons at the bottom of the page
 awards: true
 ---
 I am currently the senior research fellow in <a href="https://www.ucl.ac.uk/">University College London (UCL)</a>, Department of Computer Science.
-I work in the <a href="rpl-as-ucl.github.io">Robot Perception and Learning Lab</a> which is led by <a href="https://scholar.google.com/citations?user=cE8_5EsAAAAJ&hl=en">Prof.Dimitrios Kanoulas</a>. He is conducting cutting-edge research covering topics on navigation for mobile robots.
+I work in the <a href="rpl-as-ucl.github.io">Robot Perception and Learning Lab</a> which is led by <a href="https://scholar.google.com/citations?user=cE8_5EsAAAAJ&hl=en">Prof.Dimitrios Kanoulas</a>. 
+My long-term research aims to develop a mobile robotic system with human-level proficiency in localization, navigation, and decision-making, ultimately facilitating applications such as logistics, inspection, and rescue.
+
 
 I received my Ph.D. in Robotics in 2021 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>.
 I was fortunate to collaborate with some excellent researchers, including 
@@ -30,8 +32,8 @@ I was fortunate to collaborate with some excellent researchers, including
 <a href='https://zarathustr.github.io/'>Mr.Jin Wu</a>.
 I was the research associate in the Intelligent and Autonomous Driving Center (IADC) from 2022 to 2023.
 
-More details regarding our projects and real-world demonstrations of robots can be found on <a href="projects">Projects & Research</a>. 
-Please feel free to contact <a href="mailto:jiaojh1994@gmail.com">me</a> (jiaojh1994 at gmail dot com) if you have questions about our projects and want to collaborate us.
+More details regarding my previous/ongoing projects can be found on <a href="projects">Research Projects</a>. 
+Please feel free to contact <a href="mailto:jiaojh1994@gmail.com">me</a> (jiaojh1994 at gmail dot com) if you have questions about our projects and want collaboration.
 
 <!-- 
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.

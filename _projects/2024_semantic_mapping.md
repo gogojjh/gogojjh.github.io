@@ -4,6 +4,7 @@ title: Semantic Mapping for Navigation
 img: /assets/img/2024_tase_mapping/example_semantickitti.png
 category: Research
 horizontal: false
+importance: 1
 ---
 
 ## Real-Time Metric-Semantic Mapping for Autonomous Navigation in Outdoor Environments

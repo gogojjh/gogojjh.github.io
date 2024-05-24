@@ -1,8 +1,8 @@
 ---
 layout: page
-title: ICRA 2024 - Exhibition
+title: ICRA 2024 Record - Exhibition
 img: /assets/img/2024_icra_industry/cover_icra_2024.jpg
-category: Research
+category: Posts
 horizontal: false
 ---
 
@@ -58,7 +58,7 @@ In this blog, I will shown some intriguing products from the industry, including
 
 <p align="center">
   <img src="/assets/img/2024_icra_industry/unitree_handstand.gif" width="55%" />
-  <p align="center">Unitree legged robot. And Unitree just announced their new product on [humanoid robot](https://www.unitree.com/cn/g1), very impressive!
+  <p align="center">Very impressive Unitree legged robot!</p>
 </p>
 
 ## Unsolved Questions
