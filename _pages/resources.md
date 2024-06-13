@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /teaching/
-title: Teaching
+permalink: /resources/
+title: Resources
 description: 
 nav: true
 nav_order: 4
@@ -11,5 +11,8 @@ nav_order: 4
 
 Organize your courses by years, topics, or universities, however you like! -->
 
-### Course
+## Talk Record 
+TODO
+
+## Teaching 
 TODO
