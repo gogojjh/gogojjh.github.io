@@ -46,10 +46,10 @@ In this blog, I will shown some intriguing products from the industry, including
   <p align="center">Human Tracking Robot</p>
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <img src="/assets/img/2024_icra_industry/cute_robot.gif" width="55%" />
   <p align="center">Very cute design!</p>
-</p>
+</p> -->
 
 <p align="center">
   <img src="/assets/img/2024_icra_industry/deep_robotics.gif" width="55%" />
@@ -61,7 +61,7 @@ In this blog, I will shown some intriguing products from the industry, including
   <p align="center">Very impressive Unitree legged robot!</p>
 </p>
 
-## Unsolved Questions
+<!-- ## Unsolved Questions -->
 
 <!--
 1. Boundary of products and research
