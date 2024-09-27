@@ -9,6 +9,6 @@ related_posts: false
 Congratulation to Hexiang!
 Please check this <a href="">website</a> to play with our dataset.
 <br>
-We also plan to release a technical report addressing open challenges. Please stay tuned for further updates.
+We also plan to release a technical report about existing open challenges. Please stay tuned for further updates.
 
 
