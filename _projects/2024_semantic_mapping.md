@@ -14,6 +14,16 @@ Dimitrios Kanoulas, Rui Fan, etc.
 
 **Acknowledgement**: This is a joint research work under the support from HKUST, HKUST(GZ), Tongji University, and University College London. 
 
+<h4>
+Please click the text for 
+the 
+open-source 
+<a href="https://github.com/gogojjh/cobra">Code</a> 
+and 
+<a href="https://drive.google.com/drive/folders/160aA4naMKBFRpjt8f0LUYCYSrWYrER5G?usp=sharing">Dataset</a>
+AvA.
+</h4>
+
 ### Demo
 <p align="center">
   <img src="/assets/img/2024_tase_mapping/mapping_hkustgz.gif" width="70%" />
@@ -111,5 +121,24 @@ To demonstrate the effects of concerning the impact of measurement noise, varyin
 </p>
 
 ### Citation
-
-TBD
+Please cite our paper if you find the code and dataset useful to your research:
+```
+@article{jiao2024real,
+  title={Real-Time Metric-Semantic Mapping for Autonomous Navigation in Outdoor Environments},
+  author={Jiao, Jianhao and Geng, Ruoyu and Li, Yuanhang and Xin, Ren and Yang, Bowen and Wu, Jin and Wang, Lujia and Liu, Ming and Fan, Rui and Kanoulas, Dimitrios},
+  journal={IEEE Transactions on Automation Science and Engineering},
+  year={2024},
+  publisher={IEEE}
+}
+```
+Dataset:
+```
+@inproceedings{jiao2022fusionportable,
+  title={FusionPortable: A Multi-Sensor Campus-Scene Dataset for Evaluation of Localization and Mapping Accuracy on Diverse Platforms},
+  author={Jiao, Jianhao and Wei, Hexiang and Hu, Tianshuai and Hu, Xiangcheng and Zhu, Yilong and He, Zhijian and Wu, Jin and Yu, Jingwen and Xie, Xupeng and Huang, Huaiyang and others},
+  booktitle={2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={3851--3856},
+  year={2022},
+  organization={IEEE}
+}
+```
