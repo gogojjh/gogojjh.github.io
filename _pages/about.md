@@ -19,7 +19,7 @@ social: true  # includes social icons at the bottom of the page
 awards: true
 ---
 I am currently the senior research fellow in <a href="https://www.ucl.ac.uk/">University College London (UCL)</a>, Department of Computer Science.
-I work in the <a href="rpl-as-ucl.github.io">Robot Perception and Learning Lab</a> which is led by <a href="https://scholar.google.com/citations?user=cE8_5EsAAAAJ&hl=en">Prof.Dimitrios Kanoulas</a>. 
+I work in the <a href="https://rpl-as-ucl.github.io/">Robot Perception and Learning Lab</a> which is led by <a href="https://scholar.google.com/citations?user=cE8_5EsAAAAJ&hl=en">Prof.Dimitrios Kanoulas</a>. 
 My long-term research aims to develop a mobile robotic system with human-level proficiency in localization, navigation, and decision-making, ultimately facilitating applications such as logistics, inspection, and rescue.
 
 
