@@ -1,20 +1,97 @@
 ---
 ---
 
-@article{jiao2024litevloc,
-  title       = {LiteVLoc: Map-Lite Visual Localization for Image Goal Navigation},
-  author      = {Jiao, Jianhao and He, Jinhao and Liu, Changkun and Aegidius, Sebastian and Hu, Xiangcheng and Braud, Tristan and Kanoulas, Dimitrios},
-  abstract    = {This paper introduces LiteVLoc, a hierarchical visual localization framework using lightweight topometric maps for efficient, precise camera pose estimation, validated through experiments in simulated and real-world scenarios.},
-  journal     = {Under Review},
-  year        = {2024},
+@inproceedings{jiao2025litevloc,
+  title        = {LiteVLoc: Map-Lite Visual Localization for Image Goal Navigation},
+  author       = {Jiao+, Jianhao and He, Jinhao and Liu, Changkun and Aegidius, Sebastian and Hu, Xiangcheng and Braud, Tristan and Kanoulas, Dimitrios},
+  abstract     = {This paper introduces LiteVLoc, a hierarchical visual localization framework using lightweight topometric maps for efficient, precise camera pose estimation, validated through experiments in simulated and real-world scenarios.},
+  booktitle    = {International Conference on Robotics and Automation (ICRA)},
+  year         = {2025},
+  organization = {IEEE},
+  abbr         = {ICRA},
+  doi          = {},
+  website      = {https://rpl-cs-ucl.github.io/LiteVLoc/},
+  code         = {https://github.com/gogojjh/litevloc},
+  dimensions   = {true},
+  selected     = {true},
+  bibtex_show  = {true},
+  preview      = {icra_2025_litevloc.gif},
+  category     = {featured_publication}
+}
+
+@article{yin2024general,
+  abbr        = {TRO},
+  title       = {General Place Recognition Survey: Towards Real-World Autonomy},
+  author      = {Yin*, Peng and Jiao*, Jianhao and Zhao, Shiqi and Xu, Lingyun and Liu, Huaping and Huang, Guoquan and Milford, Michael and Choset, Howie and Scherer, Sebastian and Han, Jianda},
+  abstract    = {We provide a comprehensive review of the current SOTA advancements in place recognition, alongside the remaining challenges, and underscore its broad applications in robotics.},
+  journal     = {IEEE Transactions on Robotics (T-RO)},
+  volume      = {},
+  number      = {},
+  pages       = {},
+  year        = {2025},
   publisher   = {},
-  website     = {https://rpl-cs-ucl.github.io/LiteVLoc/},
-  code        = {https://github.com/gogojjh/litevloc},
+  url         = {},
+  pdf         = {https://arxiv.org/abs/2405.04812},
+  altmetric   = {},
   dimensions  = {true},
   selected    = {true},
   bibtex_show = {true},
-  preview     = {2024_litevloc.gif},
+  preview     = {tro_2024_gprs_preview.png},
   category    = {featured_publication}
+}
+
+@inproceedings{cheng2025logs,
+  title        = {LoGS: Visual Localization via Gaussian Splatting with Fewer Training Images},
+  author       = {Cheng, Yuzhou and Jiao+, Jianhao and Wang, Yue and Dimitrios, Kanoulas},
+  abstract     = {We present LoGS, a visual localization framework using 3D Gaussian Splatting (GS) for high-precision 6-DoF camera pose estimation. By integrating SfM-based GS mapping with image retrieval, PnP initialization, and analysis-by-synthesis refinement, LoGS achieves state-of-the-art accuracy and robustness in few-shot scenarios across four large-scale datasets.},
+  booktitle    = {International Conference on Robotics and Automation (ICRA)},
+  year         = {2025},
+  organization = {IEEE},
+  abbr         = {ICRA},
+  doi          = {},
+  website      = {https://rpl-cs-ucl.github.io/STEPP/},
+  code         = {https://github.com/RPL-CS-UCL/STEPP-Code},
+  dimensions   = {true},
+  selected     = {true},
+  bibtex_show  = {true},
+  preview      = {icra_2025_logs.png},
+  category     = {false_per_mapping_navigation}
+}
+
+@inproceedings{liu2025air,
+  title        = {AIR-HLoc: Adaptive Retrieved Images Selection for Efficient Visual Localisation},
+  author       = {Liu, Changkun and Jiao, Jianhao and Huang, Huaijian and Ma, Zhengyang and Kanoulas, Dimitrios and Braud, Tristan},
+  abstract     = {We propose AIR-HLoc, an adaptive image retrieval strategy for hierarchical localization that dynamically adjusts the number of retrieved images (k) based on global descriptor similarity, reducing feature matching time by up to 30% while maintaining state-of-the-art accuracy across indoor and outdoor datasets.},
+  booktitle    = {International Conference on Robotics and Automation (ICRA)},
+  year         = {2025},
+  organization = {IEEE},
+  abbr         = {ICRA},
+  doi          = {},
+  website      = {},
+  code         = {},
+  dimensions   = {true},
+  selected     = {true},
+  bibtex_show  = {true},
+  preview      = {icra_2025_air.png},
+  category     = {false_per_mapping_navigation}
+}
+
+@inproceedings{aegidius2025watch,
+  title        = {Watch your STEPP: Semantic Traversibility Estimation using Pose Projected Features},
+  author       = {Sebastian, Aegidius and Dennis, Hadjivelichkov and Jiao, Jianhao and Jonathan, Embly-Riches and Dimitrios, Kanoulas},
+  abstract     = {We present a terrain traversability estimation method for legged robots that learns from human walking demonstrations using DINOv2 vision Transformer embeddings and an encoder-decoder MLP. By detecting anomalies through reconstruction error minimization, our approach enables robust navigation in unstructured environments, validated via real-wrld ANYmal.},
+  booktitle    = {International Conference on Robotics and Automation (ICRA)},
+  year         = {2025},
+  organization = {IEEE},
+  abbr         = {ICRA},
+  doi          = {},
+  website      = {https://rpl-cs-ucl.github.io/STEPP/},
+  code         = {https://github.com/RPL-CS-UCL/STEPP-Code},
+  dimensions   = {true},
+  selected     = {true},
+  bibtex_show  = {true},
+  preview      = {icra_2025_watch.png},
+  category     = {false_per_mapping_navigation}
 }
 
 @article{zhang2024vircap,
@@ -43,26 +120,6 @@
   category    = {false_per_mapping_navigation}
 }
 
-@article{yin2024general,
-  abbr        = {TRO},
-  title       = {General Place Recognition Survey: Towards Real-World Autonomy},
-  author      = {Yin*, Peng and Jiao*, Jianhao and Zhao, Shiqi and Xu, Lingyun and Liu, Huaping and Huang, Guoquan and Milford, Michael and Choset, Howie and Scherer, Sebastian and Han, Jianda},
-  abstract    = {We provide a comprehensive review of the current SOTA advancements in place recognition, alongside the remaining challenges, and underscore its broad applications in robotics.},
-  journal     = {IEEE Transactions on Robotics (T-RO)},
-  volume      = {},
-  number      = {},
-  pages       = {},
-  year        = {2025},
-  publisher   = {},
-  url         = {},
-  pdf         = {https://arxiv.org/abs/2405.04812},
-  altmetric   = {},
-  dimensions  = {true},
-  selected    = {true},
-  bibtex_show = {true},
-  preview     = {tro_2024_gprs_preview.png},
-  category    = {featured_publication}
-}
 
 @article{wei2024fusionportablev2,
   abbr        = {IJRR},

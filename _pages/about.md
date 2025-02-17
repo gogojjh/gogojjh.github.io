@@ -29,7 +29,7 @@ I was fortunate to collaborate with some excellent researchers, including
 <a href='https://scholar.google.com/citations?user=RjOPTHIAAAAJ&hl=en'>Dr.Lei Tai</a>, 
 <a href='https://scholar.google.com/citations?user=FxARbSYAAAAJ&hl=en'>Dr.Haoyang Ye</a>, 
 <a href='https://scholar.google.com/citations?user=alRGtgwAAAAJ&hl=en'>Dr.Peng Yun</a>, and
-<a href='https://zarathustr.github.io/'>Mr.Jin Wu</a>.
+<a href='https://zarathustr.github.io/'>Prof.Jin Wu</a>.
 I was the research associate in the Intelligent and Autonomous Driving Center (IADC) from 2022 to 2023.
 
 More details regarding my previous/ongoing projects can be found on <a href="projects">Research Projects</a>. 

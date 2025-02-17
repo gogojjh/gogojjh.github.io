@@ -6,5 +6,5 @@ related_posts: false
 ---
 
 <a href="https://arxiv.org/abs/2401.08939">Enhancing Campus Mobility: Achievements and Challenges of the Snow Lion Autonomous Shuttle (<a href="https://chenyingbing.github.io/xueshi_campus_av">website) </a> is accepted to <a href="">IEEE Robotics & Automation Magazine</a>. 
-Congratulation to Yingbing!
+Congratulation to Yingbing (Research Scientist in Huawei Hong Kong Research Center)!
 
