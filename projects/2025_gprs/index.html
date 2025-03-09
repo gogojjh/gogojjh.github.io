@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Research Projects | Jianhao  Jiao</title>
+    <title>General Place Recognition Survey | Jianhao  Jiao</title>
     <meta name="author" content="Jianhao  Jiao">
     <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
@@ -39,7 +39,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://gogojjh.github.io/projects/">
+    <link rel="canonical" href="https://gogojjh.github.io/projects/2025_gprs/">
 
     <!-- Dark Mode -->
     
@@ -80,8 +80,8 @@
           
 
           <!-- Other pages -->
-          <li class="nav-item active">
-            <a class="nav-link" href="/projects/">Research Projects<span class="sr-only">(current)</span></a>
+          <li class="nav-item ">
+            <a class="nav-link" href="/projects/">Research Projects</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="/publications/">Publications</a>
@@ -124,177 +124,115 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Research Projects</h1>
+            <h1 class="post-title">General Place Recognition Survey</h1>
             <p class="post-description"></p>
           </header>
 
           <article>
-            <!-- pages/projects.md -->
-<div class="projects">
-  <!-- Display categorized projects -->
-  <h2 class="category">Research</h2>
-  <!-- Generate cards for each project -->
-  <div class="grid">
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item full-width">
-  <a href="/projects/2025_litevloc/">
-      <div class="card hoverable equal-height">
-<figure>
+            <h1 id="-tutorial-guidance">📖 Tutorial Guidance</h1>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/2025_icra_litevloc/exp_real_world_map_meta-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/2025_icra_litevloc/exp_real_world_map_meta-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/2025_icra_litevloc/exp_real_world_map_meta-1400.webp"></source>
-    
+<p>Welcome to the beginner’s tutorial for effectively understanding the key points of our comprehensive survey paper on General Place Recognition (PR) which has been accepted by IEEE Transactions on Robotics (T-RO) 2025.</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/2025_icra_litevloc/exp_real_world_map_meta.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<h2 id="-1-what-is-place-recognition">🔍 <strong>1. What is Place Recognition?</strong>
+</h2>
+<p>PR is defined as the capability of a robot or autonomous system to recognize and identify previously visited locations. It is a crucial component for autonomous navigation, particularly in environments that change over time or when observed from different viewpoints. PR enables robotic systems to achieve real-world autonomy by associating the current observations with past experiences stored in memory.</p>
 
-  </picture>
+<ul>
+  <li>
+<strong>Position-based PR:</strong> Identifies locations based on spatial proximity, despite changes in environmental conditions or sensor viewpoints.</li>
+  <li>
+<strong>Overlap-based PR:</strong> Identifies locations based on visual similarity or sensor data overlap, regardless of geographic distance.</li>
+</ul>
 
-</figure>
+<hr>
 
-        <div class="card-body">
-          <h2 class="card-title text-capitalize">ICRA2025 - Map-Lite Visual Localization</h2>
-          <!-- <p class="card-text"></p> -->
-          <p class="card-date"><strong>Date:</strong> 2025-03-09</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
+<h2 id="-2-why-was-this-survey-written">📝 <strong>2. Why was this Survey Written?</strong>
+</h2>
+<p>The main goal of writing this survey was to address critical gaps between current PR research and the demanding requirements of real-world autonomous robotics applications. Despite the abundance of PR research:</p>
 
-<style>
-  .grid-item.full-width {
-    width: 80%;
-  }
+<ul>
+  <li>Existing methods often lack adaptability to complex, real-world scenarios.</li>
+  <li>The need to integrate PR methods with advanced technologies like artificial intelligence (AI) and machine learning (ML) is pressing.</li>
+  <li>To clearly summarize state-of-the-art (SOTA) developments, challenges, and practical applications, providing a structured overview and future insights for the community.</li>
+</ul>
 
-  .card-title.text-capitalize {
-    text-transform: capitalize;
-    font-size: 28px;
-  }
+<hr>
 
-  .equal-height {
-    min-height: 300px;
-  }
+<h2 id="️-3-structure-of-the-survey">🗂️ <strong>3. Structure of the Survey</strong>
+</h2>
 
-  .card-date {
-    font-size: 18px;
-    color: #555;
-  }
-</style>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item full-width">
-  <a href="/projects/2024_semantic_mapping/">
-      <div class="card hoverable equal-height">
-<figure>
+<table>
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Section I</strong></td>
+      <td>Introduction and motivation, defining PR and its necessity</td>
+    </tr>
+    <tr>
+      <td><strong>Section II</strong></td>
+      <td>Formulation of effective PR and major challenges</td>
+    </tr>
+    <tr>
+      <td><strong>Section III</strong></td>
+      <td>Place representation methods: Low-level (sensor-specific) and high-level (sensor-agnostic)</td>
+    </tr>
+    <tr>
+      <td><strong>Section IV</strong></td>
+      <td>Key challenges in PR (appearance changes, viewpoint differences, generalization, efficiency, uncertainty) and corresponding solutions</td>
+    </tr>
+    <tr>
+      <td><strong>Section V</strong></td>
+      <td>Application areas and future trends (large-scale navigation, terrain navigation, multi-agent systems, lifelong autonomy)</td>
+    </tr>
+    <tr>
+      <td><strong>Section VI</strong></td>
+      <td>Overview of PR datasets, benchmarks, and open-source tools</td>
+    </tr>
+    <tr>
+      <td><strong>Section VII</strong></td>
+      <td>Conclusion and future research directions</td>
+    </tr>
+  </tbody>
+</table>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/2024_tase_mapping/example_semantickitti-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/2024_tase_mapping/example_semantickitti-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/2024_tase_mapping/example_semantickitti-1400.webp"></source>
-    
+<hr>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/2024_tase_mapping/example_semantickitti.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<h2 id="-4-applications-of-pr">🚀 <strong>4. Applications of PR</strong>
+</h2>
+<p>The survey summarizes the applications of PR in real-world autonomous systems:</p>
 
-  </picture>
+<ul>
+  <li>
+<strong>Large-Scale and Long-Term Navigation:</strong> Enabling robots to operate accurately in GNSS-denied environments.</li>
+  <li>
+<strong>Visual Terrain Relative Navigation (VTRN):</strong> Crucial for aerial and planetary exploration scenarios.</li>
+  <li>
+<strong>Multi-Agent Localization and Mapping:</strong> Enhancing cooperative exploration and mapping strategies.</li>
+  <li>
+<strong>Bio-Inspired and Lifelong Autonomy:</strong> Providing methods for long-term learning and adapting in dynamically changing environments.</li>
+</ul>
 
-</figure>
+<hr>
 
-        <div class="card-body">
-          <h2 class="card-title text-capitalize">TASE2024 - Semantic Mapping for Navigation</h2>
-          <!-- <p class="card-text"></p> -->
-          <p class="card-date"><strong>Date:</strong> 2024-08-17</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
+<h2 id="-recommended-questions-while-reading">🎯 <strong>Recommended Questions While Reading</strong>
+</h2>
+<p>To deepen your understanding, consider the following questions as you explore each section of the survey:</p>
 
-<style>
-  .grid-item.full-width {
-    width: 80%;
-  }
+<ul>
+  <li>How do different PR methods manage changes in environmental conditions and viewpoints?</li>
+  <li>What are the limitations of existing PR approaches in terms of generalization and scalability?</li>
+  <li>In what specific scenarios do these PR applications show the greatest potential?</li>
+  <li>How do current datasets and benchmarks support effective evaluation of PR algorithms?</li>
+</ul>
 
-  .card-title.text-capitalize {
-    text-transform: capitalize;
-    font-size: 28px;
-  }
+<hr>
 
-  .equal-height {
-    min-height: 300px;
-  }
-
-  .card-date {
-    font-size: 18px;
-    color: #555;
-  }
-</style>
-  </div>
-  
-  <h2 class="category">Posts</h2>
-  <!-- Generate cards for each project -->
-  <div class="grid">
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item full-width">
-  <a href="/projects/2025_gprs/">
-      <div class="card hoverable equal-height">
-<figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/tro_2024_gprs_preview-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/tro_2024_gprs_preview-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/tro_2024_gprs_preview-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/publication_preview/tro_2024_gprs_preview.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-capitalize">TRO2025 - General Place Recognition Survey</h2>
-          <!-- <p class="card-text"></p> -->
-          <p class="card-date"><strong>Date:</strong> 2025-03-09</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-
-<style>
-  .grid-item.full-width {
-    width: 80%;
-  }
-
-  .card-title.text-capitalize {
-    text-transform: capitalize;
-    font-size: 28px;
-  }
-
-  .equal-height {
-    min-height: 300px;
-  }
-
-  .card-date {
-    font-size: 18px;
-    color: #555;
-  }
-</style>
-  </div>
-  </div>
+<p>Enjoy your exploration through our “General Place Recognition Survey.” Feel free to dive deeper into each section using the detailed explanations and examples provided within the survey paper itself. For more resources, you can access our complete literature summary <a href="https://github.com/MetaSLAM/GPRS" rel="external nofollow noopener" target="_blank">here</a>. Happy reading! 📚✨</p>
 
           </article>
 
