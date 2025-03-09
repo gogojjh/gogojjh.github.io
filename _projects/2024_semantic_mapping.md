@@ -5,6 +5,9 @@ img: /assets/img/2024_tase_mapping/example_semantickitti.png
 category: Research
 horizontal: false
 importance: 1
+date_year_month: 2024-08-17
+year: 2024
+pub: TASE2024
 ---
 
 ## Real-Time Metric-Semantic Mapping for Autonomous Navigation in Outdoor Environments

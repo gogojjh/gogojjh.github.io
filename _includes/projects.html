@@ -1,20 +1,21 @@
 <!-- _includes/projects.html -->
 <div class="grid-sizer"></div>
-<div class="grid-item">
+<div class="grid-item full-width">
   {% if project.redirect -%}
   <a href="{{ project.redirect }}">
     {%- else -%}
     <a href="{{ project.url | relative_url }}">
       {%- endif %}
-      <div class="card hoverable">
+      <div class="card hoverable equal-height">
         {%- if project.img %}
         {%- include figure.html
-          path=project.img
-          alt="project thumbnail" -%}
+        path=project.img
+        alt="project thumbnail" -%}
         {%- endif %}
         <div class="card-body">
-          <h2 class="card-title text-lowercase">{{ project.title }}</h2>
-          <p class="card-text">{{ project.description }}</p>
+          <h2 class="card-title text-capitalize">{{project.pub}} - {{ project.title }}</h2>
+          <!-- <p class="card-text">{{ project.description }}</p> -->
+          <p class="card-date"><strong>Date:</strong> {{ project.date_year_month }}</p>
           <div class="row ml-1 mr-1 p-0">
             {%- if project.github -%}
             <div class="github-icon">
@@ -34,3 +35,23 @@
       </div>
     </a>
 </div>
+
+<style>
+  .grid-item.full-width {
+    width: 80%;
+  }
+
+  .card-title.text-capitalize {
+    text-transform: capitalize;
+    font-size: 28px;
+  }
+
+  .equal-height {
+    min-height: 300px;
+  }
+
+  .card-date {
+    font-size: 18px;
+    color: #555;
+  }
+</style>
