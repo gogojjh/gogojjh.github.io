@@ -714,9 +714,6 @@ footer.sticky-bottom {
   font-weight: bolder;
   font-size: 1.3em;
 }
-.selected_publications ol.bibliography li .author {
-  font-size: 1em;
-}
 .selected_publications ol.bibliography li .author a {
   border-bottom: 1px dashed var(--global-theme-color);
 }
@@ -736,6 +733,9 @@ footer.sticky-bottom {
 .selected_publications ol.bibliography li .author > span.more-authors:hover {
   color: var(--global-text-color);
   border-bottom: 1px dashed var(--global-text-color);
+}
+.selected_publications ol.bibliography li .author {
+  font-size: 1em;
 }
 .selected_publications ol.bibliography li .links a.btn {
   color: var(--global-text-color);
