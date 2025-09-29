@@ -20,11 +20,12 @@ awards: true
 ---
 I am currently the senior research fellow in <a href="https://www.ucl.ac.uk/">University College London (UCL)</a>, Department of Computer Science.
 I work in the <a href="https://rpl-as-ucl.github.io/">Robot Perception and Learning Lab</a> which is led by <a href="https://scholar.google.com/citations?user=cE8_5EsAAAAJ&hl=en">Prof.Dimitrios Kanoulas</a>. 
-My long-term research aims to develop a mobile robotic system with human-level proficiency in localization, navigation, and decision-making, ultimately facilitating applications such as logistics, inspection, and rescue.
-
+My research in SLAM, sensor fusion, and autonomous navigation includes notable contributions such as [M-LOAM](https://github.com/gogojjh/M-LOAM), [FusionPortable](https://fusionportable.github.io/dataset/fusionportable_v2/), and the scalable, structure-free visual navigation system, [OpenNavMap]().
+My long-term research aims to develop lifelong, cognitive spatial memory mechanisms for autonomous systems.
+This work centers on achieving sustainable autonomy and dynamic map maintenance capable of scaling to rapidly increasing spatio-temporal requirements in the most challenging, dynamic, and unstructured worlds. This foundational capability is critical for applications, including logistics, infrastructure inspection, and high-stakes rescue missions in domains such as mines and forests.
 
 I received my Ph.D. in Robotics in 2021 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>.
-I was fortunate to collaborate with some excellent researchers, including 
+I was fortunate to collaborate with some excellent researchers during Ph.D., including 
 <a href='https://scholar.google.com/citations?user=P5AJTXcAAAAJ&hl=en'>Prof.Rui Fan</a>, 
 <a href='https://scholar.google.com/citations?user=RjOPTHIAAAAJ&hl=en'>Dr.Lei Tai</a>, 
 <a href='https://scholar.google.com/citations?user=FxARbSYAAAAJ&hl=en'>Dr.Haoyang Ye</a>, 
