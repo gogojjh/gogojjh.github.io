@@ -5,6 +5,6 @@ inline: true
 related_posts: false
 ---
 
-OpenNavMap is accepted to <a href="https://adacompnus.github.io/open-world-navigation-25/">IROS 2025 Workshop: Open World Navigation in Human-centric Environments</a>. 
+OpenNavMap received the **Best Paper Award** at the <a href="https://adacompnus.github.io/open-world-navigation-25/">IROS 2025 Workshop: Open World Navigation in Human-centric Environments</a>!
 
 
