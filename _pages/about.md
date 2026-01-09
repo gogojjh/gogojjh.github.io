@@ -2,15 +2,15 @@
 layout: about
 title: About
 permalink: /
-subtitle: <b>Senior Research Fellow</b> at University College London (UCL) <br>  <br> Mobile Robot, Navigation, Embodied Intelligence
+subtitle: <b>Senior Research Fellow</b>, The Hong Kong Polytechnic University (PolyU) <br> <br>Mobile Robot, Navigation, Embodied Intelligence
 # <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology</a>. 
 
 profile:
   align: right
-  image: jianhaojiao_pict.jpeg
+  image: jianhaojiao_pict_2023.png
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Hong Kong, 2022, captured by <a href="https://scholar.google.com/citations?user=HEdF3JMAAAAJ&hl=en">Ren Xin</a></p>
+    <p>China, 2023</p>
 
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
@@ -18,10 +18,10 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 awards: true
 ---
-I am currently the senior research fellow in <a href="https://www.ucl.ac.uk/">University College London (UCL)</a>, Department of Computer Science.
-I work in the <a href="https://rpl-as-ucl.github.io/">Robot Perception and Learning Lab</a> which is led by <a href="https://scholar.google.com/citations?user=cE8_5EsAAAAJ&hl=en">Prof.Dimitrios Kanoulas</a>. 
-My research in SLAM, sensor fusion, and autonomous navigation includes notable contributions such as [M-LOAM](https://github.com/gogojjh/M-LOAM), [FusionPortable](https://fusionportable.github.io/dataset/fusionportable_v2/), and the scalable, structure-free visual navigation system, [OpenNavMap]().
+I am currently the senior research fellow in <a href="https://www.polyu.edu.hk/">The Hong Kong Polytechnic University (PolyU)</a>, Department of Aeronautical and Aviation Engineering.
+I am working closed to <a href="https://www.polyu.edu.hk/aae/people/academic-staff/dr-wen-weisong/">Prof.Welson Wen</a> in the <a href="https://polyu-taslab.github.io/">Trustworthy AI and Autonomous Systems Lab</a>.
 
+My research in autonomous navigation and embodied intelligence includes notable contributions such as [M-LOAM](https://github.com/gogojjh/M-LOAM), [FusionPortable](https://fusionportable.github.io/dataset/fusionportable_v2/), and the scalable, structure-free visual navigation system, [OpenNavMap](https://rpl-cs-ucl.github.io/OpenNavMap_page/).
 My long-term research aims to develop lifelong, cognitive spatial memory mechanisms for autonomous systems.
 This work centers on achieving sustainable autonomy and dynamic map maintenance capable of scaling to rapidly increasing spatio-temporal requirements in the most challenging, dynamic, and unstructured worlds. This foundational capability is critical for applications, including logistics, infrastructure inspection, and high-stakes rescue missions in domains such as mines and forests.
 
@@ -32,7 +32,8 @@ I was fortunate to collaborate with some excellent researchers including
 <a href='https://scholar.google.com/citations?user=FxARbSYAAAAJ&hl=en'>Dr.Haoyang Ye</a>, 
 <a href='https://scholar.google.com/citations?user=alRGtgwAAAAJ&hl=en'>Dr.Peng Yun</a>, and
 <a href='https://zarathustr.github.io/'>Prof.Jin Wu</a>.
-I was the research associate in the Intelligent and Autonomous Driving Center (IADC) from 2022 to 2023.
+I was the research associate in the Intelligent and Autonomous Driving Center (IADC) from 2022 to 2023, and
+senior research in University College London (UCL) from 2024 to 2025.
 
 More details regarding my previous/ongoing projects can be found on <a href="projects">Research Projects</a>. 
 Please feel free to contact <a href="mailto:jiaojh1994@gmail.com">me</a> (jiaojh1994 at gmail dot com) if you have questions about our projects and want collaboration.
