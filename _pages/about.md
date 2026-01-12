@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <b>Senior Research Fellow</b>, The Hong Kong Polytechnic University (PolyU) <br> <br>Mobile Robot, Navigation, Embodied Intelligence
+subtitle: Mobile Robot, Navigation, Embodied Intelligence
 # <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology</a>. 
 
 profile:
@@ -18,8 +18,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 awards: true
 ---
-I am currently the senior research fellow in <a href="https://www.polyu.edu.hk/">The Hong Kong Polytechnic University (PolyU)</a>, Department of Aeronautical and Aviation Engineering.
-I am working closed to <a href="https://www.polyu.edu.hk/aae/people/academic-staff/dr-wen-weisong/">Prof.Welson Wen</a> in the <a href="https://polyu-taslab.github.io/">Trustworthy AI and Autonomous Systems Lab</a>.
 
 My research in autonomous navigation and embodied intelligence includes notable contributions such as [M-LOAM](https://github.com/gogojjh/M-LOAM), [FusionPortable](https://fusionportable.github.io/dataset/fusionportable_v2/), and the scalable, structure-free visual navigation system, [OpenNavMap](https://rpl-cs-ucl.github.io/OpenNavMap_page/).
 My long-term research aims to develop lifelong, cognitive spatial memory mechanisms for autonomous systems.
