@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <b>Senior Research Fellow</b>, The Hong Kong Polytechnic University (PolyU) <br> <br>Mobile Robot, Navigation, Embodied Intelligence
+# subtitle: <b>Senior Research Fellow</b>, The Hong Kong Polytechnic University (PolyU) <br> <br>SLAM, Navigation, Embodied Intelligence
 # <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology</a>. 
 
 profile:
@@ -19,12 +19,14 @@ social: true  # includes social icons at the bottom of the page
 awards: true
 ---
 
-I am currently the senior research fellow in <a href="https://www.polyu.edu.hk/">The Hong Kong Polytechnic University (PolyU)</a>, Department of Aeronautical and Aviation Engineering.
-I am working closed to <a href="https://www.polyu.edu.hk/aae/people/academic-staff/dr-wen-weisong/">Prof.Welson Wen</a> in the <a href="https://polyu-taslab.github.io/">Trustworthy AI and Autonomous Systems Lab</a>.
+<b>Position:</b> I am currently a senior research fellow jointly at <a href="https://www.polyu.edu.hk/">The Hong Kong Polytechnic University (PolyU)</a>, Department of Aeronautical and Aviation Engineering, and <a href="https://www.ucl.ac.uk/">University College London (UCL)</a>, Department of Computer Science.
+I work closely with <a href="https://www.polyu.edu.hk/aae/people/academic-staff/dr-wen-weisong/">Prof. Weisong Wen</a> in the <a href="https://polyu-taslab.github.io/">Trustworthy AI and Autonomous Systems Lab</a> at PolyU, and <a href="https://profiles.ucl.ac.uk/73094-dimitrios-kanoulas">Prof. Dimitrios Kanoulas</a> in the <a href="https://rpl-as-ucl.github.io/">Robot Perception and Learning Lab</a> at UCL.
 
-My research in autonomous navigation and embodied intelligence includes notable contributions such as [M-LOAM](https://github.com/gogojjh/M-LOAM), [FusionPortable](https://fusionportable.github.io/dataset/fusionportable_v2/), and the scalable, structure-free visual navigation system, [OpenNavMap](https://rpl-cs-ucl.github.io/OpenNavMap_page/).
+<b>Brief Research Statement:</b> My research in autonomous navigation and embodied intelligence includes notable contributions such as [M-LOAM](https://github.com/gogojjh/M-LOAM), [FusionPortable](https://fusionportable.github.io/dataset/fusionportable_v2/), and the scalable, structure-free visual navigation system, [OpenNavMap](https://rpl-cs-ucl.github.io/OpenNavMap_page/).
 My long-term research aims to develop lifelong, cognitive spatial memory mechanisms for autonomous systems.
 This work centers on achieving sustainable autonomy and dynamic map maintenance capable of scaling to rapidly increasing spatio-temporal requirements in the most challenging, dynamic, and unstructured worlds. This foundational capability is critical for applications, including logistics, infrastructure inspection, and high-stakes rescue missions in domains such as mines and forests.
+
+<b>Supervision:</b> I have had the opportunity to supervise over 15 students, who have pursued positions at leading academic institutions (Imperial College London, University of Toronto, UCL, University of Science and Technology Beijing, Shenzhen University, and HKUSTGZ, etc.), as well as renowned industry leaders (Huawei, DJI, Zhuoyu Technology, RobotScience, and Agibot, etc).
 
 I received my Ph.D. in Robotics in 2021 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>.
 I was fortunate to collaborate with some excellent researchers including 
