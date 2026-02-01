@@ -7,12 +7,19 @@ nav: true
 nav_order: 4
 ---
 
-<!-- For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+This page contains slides from invited talks and teaching materials.
 
-Organize your courses by years, topics, or universities, however you like! -->
+---
 
-## Talk Record 
-TODO
+## Invited Talks
 
-## Teaching 
-TODO
+| Title | Materials | Venue          | Host |
+|-------|-----------|----------------|------|
+| SLAM for Robotics: Towards Lifelong Spatial Memory and Navigation in Unstructured Worlds | [Slides](/assets/pdf/202601_presentation_cuhksz.pdf) | Chinese University of Hong Kong, Shenzhen (January 2026) | [Prof. Junfeng Wu](https://mypage.cuhk.edu.cn/academics/junfengwu/) |
+
+
+---
+
+## Teaching
+
+Teaching materials and course information will be added here.
