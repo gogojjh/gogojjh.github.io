@@ -26,7 +26,7 @@ I work closely with <a href="https://www.polyu.edu.hk/aae/people/academic-staff/
 My long-term research aims to develop lifelong, cognitive spatial memory mechanisms for Embodied AI.
 This work centers on achieving sustainable autonomy and dynamic memory maintenance capable of scaling to rapidly increasing spatio-temporal requirements in the most challenging, dynamic, and unstructured worlds. This foundational capability is critical for applications, including logistics, infrastructure inspection, and high-stakes rescue missions in domains such as mines and forests.
 
-<b>Supervision:</b> I have had the opportunity to supervise over 15 students, who have pursued positions at leading academic institutions (Imperial College London, University of Toronto, UCL, University of Science and Technology Beijing, Shenzhen University, and HKUSTGZ, etc.), as well as renowned industry leaders (Huawei, DJI, Zhuoyu Technology, RobotScience, and Agibot, etc).
+<b>Supervision:</b> I have had the opportunity to supervise over 15 students, who have pursued research and teaching positions at leading academic institutions (Imperial College London, University of Toronto, UCL, University of Science and Technology Beijing, Shenzhen University, and HKUSTGZ, etc.), as well as renowned industry leaders (Huawei, DJI, Zhuoyu Technology, RobotScience, and Agibot, etc).
 
 I received my Ph.D. in Robotics in 2021 from <a href='https://hkust.edu.hk'>The Hong Kong University of Science and Technology (HKUST)</a>.
 I was fortunate to collaborate with some excellent researchers including 
