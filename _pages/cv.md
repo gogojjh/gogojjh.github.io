@@ -1,7 +1,7 @@
 ---
 layout: cv
 permalink: /cv/
-title: CV
+title: CV&Statement
 nav: true
 nav_order: 6
 ---
