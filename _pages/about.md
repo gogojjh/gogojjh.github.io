@@ -25,6 +25,7 @@ I work closely with <a href="https://www.polyu.edu.hk/aae/people/academic-staff/
 <b>Brief Research Statement:</b> My research in autonomous navigation and embodied intelligence includes notable contributions such as [M-LOAM [TRO 2021]](https://github.com/gogojjh/M-LOAM), [FusionPortableV1-V2 [IJRR 2024]](https://fusionportable.github.io/dataset/fusionportable_v2/), [General Place Recognition Survey [TRO 2024]](https://github.com/MetaSLAM/GPRS_Survey), and the scalable, structure-free visual navigation system, [OpenNavMap [Under Review]](https://rpl-cs-ucl.github.io/OpenNavMap_page/).
 My long-term research aims to develop lifelong, cognitive spatial memory mechanisms for Embodied AI.
 This work centers on achieving sustainable autonomy and dynamic memory maintenance capable of scaling to rapidly increasing spatio-temporal requirements in the most challenging, dynamic, and unstructured worlds. This foundational capability is critical for applications, including logistics, infrastructure inspection, and high-stakes rescue missions in domains such as mines and forests.
+Full statement can be checked in <a href="/cv/">CV&Statement</a>.
 
 <b>Supervision:</b> I have had the opportunity to supervise over 15 students, who have pursued research and teaching positions at leading academic institutions (Imperial College London, University of Toronto, UCL, University of Science and Technology Beijing, Shenzhen University, and HKUSTGZ, etc.), as well as renowned industry leaders (Huawei, DJI, Zhuoyu Technology, RobotScience, and Agibot, etc).
 
