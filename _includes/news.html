@@ -2,7 +2,7 @@
   {% if site.news != blank -%}
   {%- assign news_size = site.news | size -%}
   <div class="table-responsive" {% if include.limit and site.announcements.scrollable and news_size>
-    8 %}style="max-height: 30rem; overflow-y: auto;"{% endif %}>
+    8 %}style="max-height: 39rem; overflow-y: auto;"{% endif %}>
     <table class="table table-sm table-borderless">
       {%- assign news = site.news | reverse -%}
       {% if include.limit and site.announcements.limit %}
