@@ -19,8 +19,7 @@ social: true  # includes social icons at the bottom of the page
 awards: true
 ---
 
-<b>Position:</b> I am currently a senior research fellow jointly at <a href="https://www.polyu.edu.hk/">The Hong Kong Polytechnic University (PolyU)</a>, Department of Aeronautical and Aviation Engineering, and <a href="https://www.ucl.ac.uk/">University College London (UCL)</a>, Department of Computer Science.
-I work closely with <a href="https://www.polyu.edu.hk/aae/people/academic-staff/dr-wen-weisong/">Prof. Weisong Wen</a> in the <a href="https://polyu-taslab.github.io/">Trustworthy AI and Autonomous Systems Lab</a> at PolyU, and <a href="https://profiles.ucl.ac.uk/73094-dimitrios-kanoulas">Prof. Dimitrios Kanoulas</a> in the <a href="https://rpl-as-ucl.github.io/">Robot Perception and Learning Lab</a> at UCL.
+<b>Position:</b> I am currently a Researcher at the <a href="https://www.cmhk.com/main/xwzx/xsgsdt/content/2074106574381137922_2074106574397915138.html">Lion Rock AI Lab</a> (China Merchants Group), leading R&D on Navigation and Spatial AI.
 
 <b>Brief Research Statement:</b> My research in autonomous navigation and embodied intelligence includes notable contributions such as [M-LOAM [TRO 2021]](https://github.com/gogojjh/M-LOAM), [FusionPortableV1-V2 [IJRR 2024]](https://fusionportable.github.io/dataset/fusionportable_v2/), [General Place Recognition Survey [TRO 2024]](https://github.com/MetaSLAM/GPRS_Survey), and the scalable, structure-free visual navigation system, [OpenNavMap [Under Review]](https://rpl-cs-ucl.github.io/OpenNavMap_page/).
 My long-term research aims to develop lifelong, cognitive spatial memory mechanisms for Embodied AI.
@@ -36,8 +35,7 @@ I was fortunate to collaborate with some excellent researchers including
 <a href='https://scholar.google.com/citations?user=FxARbSYAAAAJ&hl=en'>Dr.Haoyang Ye</a>, 
 <a href='https://scholar.google.com/citations?user=alRGtgwAAAAJ&hl=en'>Dr.Peng Yun</a>, and
 <a href='https://zarathustr.github.io/'>Prof.Jin Wu</a>.
-I was the research associate in the Intelligent and Autonomous Driving Center (IADC) from 2022 to 2023, and
-senior research fellow in University College London (UCL) from 2024 to 2025.
+I was the research associate in the Intelligent and Autonomous Driving Center (IADC) from 2022 to 2023, senior research fellow at University College London (UCL) from 2024 to 2025 (with <a href="https://profiles.ucl.ac.uk/73094-dimitrios-kanoulas">Prof. Dimitrios Kanoulas</a>), and senior research fellow at <a href="https://www.polyu.edu.hk/">The Hong Kong Polytechnic University (PolyU)</a> from January to June 2026 (with <a href="https://www.polyu.edu.hk/aae/people/academic-staff/dr-wen-weisong/">Prof. Weisong Wen</a>).
 
 More details regarding my previous/ongoing projects can be found on <a href="projects">Research Projects</a>. 
 Please feel free to contact <a href="mailto:jiaojh1994@gmail.com">me</a> (jiaojh1994 at gmail dot com) if you have questions about our projects and want collaboration.
