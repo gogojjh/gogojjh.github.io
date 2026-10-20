@@ -19,7 +19,7 @@ social: true  # includes social icons at the bottom of the page
 awards: true
 ---
 
-<b>Position:</b> I am currently a Researcher at the <a href="https://www.cmhk.com/main/xwzx/xsgsdt/content/2074106574381137922_2074106574397915138.html">Lion Rock AI Lab</a> (China Merchants Group), leading R&D on Navigation and Spatial AI.
+<b>Position:</b> I am currently a Researcher at the <a href="https://www.cmhk.com/main/xwzx/xsgsdt/content/2074106574381137922_2074106574397915138.html">Lion Rock AI Lab</a> (China Merchants Group), leading R&D on Navigation and Spatial AI, and an Honorary Senior Research Fellow at <a href="https://www.ucl.ac.uk/">University College London (UCL)</a>.
 
 <b>Brief Research Statement:</b> My research in autonomous navigation and embodied intelligence includes notable contributions such as [M-LOAM [TRO 2021]](https://github.com/gogojjh/M-LOAM), [FusionPortableV1-V2 [IJRR 2024]](https://fusionportable.github.io/dataset/fusionportable_v2/), [General Place Recognition Survey [TRO 2024]](https://github.com/MetaSLAM/GPRS_Survey), and the scalable, structure-free visual navigation system, [OpenNavMap [TRO 2026]](https://rpl-cs-ucl.github.io/OpenNavMap_page/).
 My long-term research aims to develop lifelong, cognitive spatial memory mechanisms for Embodied AI.
