@@ -39,7 +39,14 @@
 <style>
   .projects .grid-sizer,
   .projects .grid-item.full-width {
-    width: calc(50% - 5px);
+    width: 50%;
+    padding: 0 5px;
+    box-sizing: border-box;
+  }
+
+  .projects .grid-sizer {
+    padding: 0;
+    height: 0;
   }
 
   @media (max-width: 576px) {
