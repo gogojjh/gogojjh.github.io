@@ -1,0 +1,309 @@
+---
+layout: null
+title: Do Visual Navigators Still Need a Map?
+description: Dense, sparse and map-free image-goal navigation with a Go2 robot across three environments.
+permalink: /projects/visual-navigators-map/
+img: /assets/img/2026_vnav_benchmark.png
+category: Posts
+horizontal: false
+importance: 1
+date: 2026-10-26
+date_year_month: 2026-10-26
+year: 2026
+pub: Research Blog
+github: https://github.com/gogojjh/vnav_benchmark
+---
+{% raw %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Do Visual Navigators Still Need a Map?</title>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#fafbf9;--surface:#fff;--ink:#202d28;--muted:#607169;--line:#dce4dd;--table-line:#b8c8be;--accent:#216950;--accent-soft:#eef4ef;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Public Sans',system-ui,sans-serif;font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{width:100%;max-width:1000px;margin:0 auto;padding:24px 36px 64px}
+a{color:var(--accent);text-underline-offset:4px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+.page-nav{display:flex;gap:24px;flex-wrap:wrap;font-size:.8rem;padding:12px 0;border-bottom:1px solid var(--line)}
+.hero{padding:56px 0 40px}
+h1,h2,h3,h4{color:var(--ink);text-wrap:balance}
+h1,h2{font-family:'Spectral',Georgia,serif;font-weight:600;letter-spacing:-.025em}
+h1{font-size:clamp(2.4rem,5vw,3.65rem);line-height:1.14;margin:0;max-width:none}
+h2{font-size:2rem;line-height:1.25;margin:0 0 24px}
+h3{font-size:1.15rem;font-weight:600;line-height:1.45;margin:32px 0 14px}
+h4{font-size:1rem;line-height:1.5;margin:24px 0 12px}
+.hero .code-note{margin:20px 0 0;font-size:.88rem;color:var(--muted)}
+p{margin:0 0 20px}
+strong{font-weight:600}
+section[id]{padding:48px 0 20px;margin:0;border-top:1px solid var(--line);scroll-margin-top:88px}
+#background{padding-top:34px;border:0}
+nav.toc{position:sticky;top:0;z-index:5;display:flex;gap:22px;overflow-x:auto;padding:16px 0;background:var(--bg);border-block:1px solid var(--line);scrollbar-width:thin}
+nav.toc a{flex-shrink:0;color:var(--muted);font-size:.75rem;font-weight:500;text-decoration:none;white-space:nowrap}
+nav.toc a:hover{color:var(--accent)}
+figure{width:100%;margin:28px 0 32px}
+figure img,figure video{display:block;width:100%;height:auto;background:var(--surface);border:1px solid var(--line);border-radius:4px}
+figure>a{display:block;width:100%}
+figcaption{width:100%;margin:12px 0 0;color:var(--muted);font-size:.8rem;line-height:1.7}
+.figure-number{color:var(--ink);font-weight:600}
+.tablewrap,.table-scroll{width:100%;overflow-x:auto;margin:24px 0 28px;overscroll-behavior-x:contain}
+table{width:100%;border-collapse:collapse;border:1px solid var(--table-line);font-size:.83rem;line-height:1.6;font-variant-numeric:tabular-nums}
+th,td{border:1px solid var(--table-line);padding:11px 13px;text-align:left;vertical-align:top;white-space:normal}
+thead th{background:var(--accent-soft);font-size:.78rem;font-weight:600;vertical-align:bottom}
+tbody th{font-weight:500}
+tbody tr:nth-child(even){background:#f3f6f2}
+caption{caption-side:top;text-align:left;color:var(--muted);font-size:.8rem;line-height:1.6;padding:0 0 11px}
+.table-number{font-weight:600;color:var(--ink)}
+.main-results th:not(:first-child),.main-results td:not(:first-child){text-align:right;font-variant-numeric:tabular-nums}
+.main-results td:first-child{font-weight:400}
+.metrics-table tbody th{width:22%}
+.env-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%;padding:5px;margin:28px 0;background:#edf2ed;border:1px solid var(--line);border-radius:10px}
+.env-tabs button{min-width:0;width:100%;padding:12px 16px;border:1px solid transparent;border-radius:6px;background:transparent;color:var(--muted);font:inherit;font-size:.85rem;font-weight:500;line-height:1.4;cursor:pointer;transition:background .15s,color .15s}
+.env-tabs button:hover{background:#e2ebe3}
+.env-tabs button[aria-selected=true]{background:var(--surface);border-color:var(--line);color:var(--accent);box-shadow:0 1px 3px #16331e0a;font-weight:600}
+[hidden]{display:none!important}
+.scene-panel{padding-top:0}
+.scene-panel>h3:first-child{margin-top:20px}
+.protocol,.method-key,.muted{font-size:.87rem;color:var(--muted)}
+.video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0}
+.demo-card{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.demo-card video{width:100%;height:auto;display:block;aspect-ratio:960/760;background:#e8ece8;border:0;border-radius:0}
+.demo-caption{padding:13px;color:var(--muted);font-size:.78rem;line-height:1.65}
+.demo-title{display:block;color:var(--ink);font-size:.9rem;margin-bottom:5px;font-weight:600}
+.demo-meta{display:block;margin-bottom:7px;font-variant-numeric:tabular-nums}
+.demo-card a{font-size:.75rem}
+code,.mono{font-family:'IBM Plex Mono',monospace;font-size:.83em;overflow-wrap:anywhere}
+.steps,.timeline,.prose-list{padding-left:24px;margin:0 0 24px}
+.steps>li,.timeline>li,.prose-list>li{padding-left:6px;margin-bottom:14px}
+.steps>li::marker{color:var(--accent);font-weight:600}
+details{margin:24px 0;border:1px solid var(--line);border-radius:0;padding:12px 0;border-inline:0}
+summary{cursor:pointer;font-size:.88rem;font-weight:600;color:var(--accent)}
+.promptbox{margin-top:16px;white-space:pre-wrap;font-family:'IBM Plex Mono',monospace;font-size:.75rem;line-height:1.7;max-height:440px;overflow-y:auto;color:var(--muted)}
+.refs{list-style:none;padding:0;font-size:.8rem;line-height:1.8;overflow-wrap:anywhere}
+.refs li{padding-left:26px;text-indent:-26px;margin-bottom:18px}
+footer{margin-top:24px;padding-top:22px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted)}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media(max-width:680px){
+ body{font-size:16px;line-height:1.8}
+ .wrap{padding:12px 20px 40px}
+ .hero{padding:36px 0 28px}
+ h1{font-size:2.35rem}h2{font-size:1.8rem}h3{font-size:1.08rem}
+ section[id]{padding-top:36px}
+ nav.toc{gap:20px;padding-block:13px}
+ .env-tabs{gap:4px;padding:4px;margin-block:24px}
+ .env-tabs button{padding:11px 6px;font-size:.8rem}
+ .video-grid{grid-template-columns:1fr;gap:18px}
+ th,td{padding:9px 10px}
+ .tablewrap table:not(.metrics-table):not(.main-results){table-layout:fixed;font-size:.68rem;overflow-wrap:anywhere}
+ .tablewrap table:not(.metrics-table):not(.main-results) th{font-size:.67rem}
+ .tablewrap table:not(.metrics-table):not(.main-results) th:nth-child(1){width:9%}
+ .tablewrap table:not(.metrics-table):not(.main-results) th:nth-child(2){width:12%}
+ .tablewrap table:not(.metrics-table):not(.main-results) th:nth-child(3){width:19%}
+ .tablewrap table:not(.metrics-table):not(.main-results) th:nth-child(4){width:23%}
+ .tablewrap table:not(.metrics-table):not(.main-results) th:nth-child(5){width:37%}
+ .main-results{font-size:.75rem}.main-results th{font-size:.7rem}
+ .demo-caption{font-size:.82rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style></head>
+<body>
+<div class="wrap">
+<div class="page-nav"><a href="/projects/">← All projects</a></div><div class="hero">
+<h1>Do Visual Navigators Still Need a Map?</h1>
+<p class="code-note">The complete benchmark implementation is open source: <a href="https://github.com/gogojjh/vnav_benchmark">Code on GitHub</a>.</p>
+</div>
+<nav class="toc">
+<a href="#background">Background</a>
+<a href="#setup">Problem Setup</a>
+<a href="#implementation">Implementation</a>
+<a href="#results">Experiments</a>
+<a href="#discussion">Discussion</a>
+<a href="#references">References</a>
+<a href="#acknowledgements">Acknowledgements</a>
+</nav>
+<section id="background">
+<h2>Background</h2>
+<p>A robot that has visited a place before can use a map to guide its next journey. For large-scale
+    navigation, however, building and maintaining that map is part of the problem: how much information
+    must we collect before the robot can find its way reliably? Our earlier work explored lightweight
+    visual maps as an answer. First, LiteVLoc <a href="#ref-1">[1]</a> combined place recognition,
+    feature matching, and pose-graph optimization to support autonomous, global, continuous localization
+    on sparse topological maps. Then, OpenNavMap <a href="#ref-2">[2]</a> extended this direction toward
+    crowdsourced navigation systems. Motivated by mapping with multiple devices, it addressed
+    landmark-free multi-session mapping so that separate traversals could contribute to a shared map.
+    Meanwhile, frontier vision-language models such as OpenAI's GPT-6 Astra <a href="#ref-3">[3]</a>
+    make us curious about what a model can infer from the camera view and a goal image alone. Can it
+    understand the space and steer a robot through it? Intuitively, a map should help. Yet how much a
+    prior visual map helps, which observations are worth keeping, and whether map priors can impair
+    the model's own navigation remain unclear. We therefore compare dense, sparse, and absent visual
+    maps while varying access to localization in a shared image-goal navigation task.</p>
+</section>
+<section id="setup">
+<h2>Problem Setup</h2>
+<h3>Task and evaluation scope</h3>
+<p>We use image-goal navigation to test whether a robot can connect visual recognition with movement. A goal image specifies where to go and which direction to face, allowing us to compare how different navigation methods use visual observations and prior maps. The robot must reach the place where the goal image was captured and face the same direction. We manually collect five independent routes per scene and build one prior topometric map per route, sampled at two densities. Evaluation now covers five routes in each of ENV0, ENV1 and ENV3, run once per method and route. ENV1 and ENV3 use the uniformly re-evaluated results described below.</p>
+<h3>What a topometric map contains</h3>
+<p>A topometric map stores keyframe images with their 2D poses and graph connections along recorded routes. These connections provide a prior about which transitions belong to a traversable route; they do not by themselves provide a local motion plan or a facility-control skill.</p>
+<figure id="figure-1">
+<img alt="Env0 R5 topometric map: equal-sized camera frusta represent dense keyframes in green and sparse keyframes in red, with four corresponding keyframe images" src="/assets/projects/vnav-benchmark/figures/topometric_map.png"/>
+<figcaption><span class="figure-number">Figure 1. </span>Env0 R5: dense keyframes in green, sparse keyframes in red, and selected keyframe images.</figcaption>
+</figure>
+<h3>Success and metrics</h3>
+<div class="tablewrap"><table class="metrics-table" id="table-1"><caption><span class="table-number">Table 1. </span>Success criteria and evaluation metrics.</caption>
+<thead><tr><th scope="col">Criterion</th><th scope="col">Definition</th></tr></thead>
+<tbody>
+<tr><th scope="row">Success</th><td>Declare arrival within 0.5 m and 45° of the pose of the goal image.</td></tr>
+<tr><th scope="row">Run protocol</th><td>Each method runs each route once.</td></tr>
+<tr><th scope="row">SR</th><td>Success rate.</td></tr>
+<tr><th scope="row">SPL</th><td>Success weighted by path efficiency against the experiment’s fixed reference path; failures score zero.</td></tr>
+</tbody>
+</table></div>
+<h3>Baselines</h3>
+<p>We compare seven methods on the same Go2 robot, routes, and success criterion. Go2 carries a forward-facing RGB-D camera.</p>
+<ul>
+<li><strong>SRU</strong> <a href="#ref-4">[4]</a> uses depth, odometry, and a target coordinate. It outputs forward and lateral velocities and a yaw rate (<code>vx, vy, wz</code>). It never sees the goal image.</li>
+<li><strong>VLM (GPT-6 Astra)</strong> receives only RGB images, including the goal image, with no depth, odometry, or coordinates. It outputs the same velocity commands (<code>vx, vy, wz</code>), plus decisions about subgoal arrival and task completion.</li>
+</ul>
+<div class="tablewrap"><table id="table-2"><caption><span class="table-number">Table 2. </span>Navigation methods and information available to each planner.</caption>
+<thead><tr><th>ID</th><th>Map</th><th>Localization</th><th>Planner</th><th>How subgoal arrival is determined</th></tr></thead>
+<tbody>
+<tr><td><strong>B0</strong></td><td>Dense</td><td>Continuous</td><td>SRU (point goal)</td><td>By ground-truth pose</td></tr>
+<tr><td><strong>M1</strong></td><td>Sparse</td><td>Continuous</td><td>SRU (point goal)</td><td>By ground-truth pose</td></tr>
+<tr><td><strong>M2</strong></td><td>Dense</td><td>Continuous</td><td>VLM (image goal)</td><td>By ground-truth pose</td></tr>
+<tr><td><strong>M3</strong></td><td>Sparse</td><td>Continuous</td><td>VLM (image goal)</td><td>By ground-truth pose</td></tr>
+<tr><td><strong>M4</strong></td><td>Dense</td><td>Initial only</td><td>VLM (image goal)</td><td>VLM decides when it has reached the current subgoal image</td></tr>
+<tr><td><strong>M5</strong></td><td>Sparse</td><td>Initial only</td><td>VLM (image goal)</td><td>VLM decides when it has reached the current subgoal image</td></tr>
+<tr><td><strong>M6</strong></td><td>None</td><td>None</td><td>VLM (image goal)</td><td>No subgoals; only the final goal image</td></tr>
+</tbody>
+</table></div>
+<p>B0/M1 isolate map density for SRU; M2/M3 replace SRU with a VLM. M4/M5 remove continuous localization, and M6 removes the map entirely. Continuous localization uses ground-truth pose to determine subgoal completion and episode termination. Initial-only localization supplies a starting pose fix, then relies on visual recognition. The VLM itself never receives pose coordinates.</p>
+<h3>Physics and locomotion</h3>
+<p>Unlike HM3D-based image-goal benchmarks <a href="#ref-5">[5]</a>, including Instance-ImageNav <a href="#ref-6">[6]</a>, we simulate Go2 with furniture, collisions, and continuous velocity commands. MoE-CTS <a href="#ref-7">[7]</a>, the quadruped locomotion controller, executes those commands.</p>
+</section>
+<section id="implementation">
+<h2>Implementation</h2>
+<p>We run the experiments in <strong>NVIDIA Isaac Sim</strong>, simulating a Unitree Go2 with
+    physics, collisions, and camera observations.</p>
+<ol class="steps">
+<li><strong>Route.</strong> B0–M5 use Dijkstra's algorithm to select subgoals; M6 sees only the final goal image.</li>
+<li><strong>Recognize progress.</strong> Continuous localization checks subgoals by pose; M4/M5 recognize arrival from images.</li>
+<li><strong>Act and repeat.</strong> SRU <a href="#ref-4">[4]</a> uses depth, odometry, and coordinates. The VLM sees the current RGB frame, up to four history thumbnails, and goal and subgoal images. Both output <code>vx, vy, wz</code>.</li>
+</ol>
+<figure id="figure-2">
+<img alt="Pipeline diagram showing the map branch, the two observation-and-planner branches for SRU and VLM, and the shared velocity-command and simulator-step loop" src="/assets/projects/vnav-benchmark/figures/pipeline.png"/>
+<figcaption><span class="figure-number">Figure 2. </span>SRU and VLM share a velocity-command loop; camera and target frames are from R2, the illustrative robot view from another recording.</figcaption>
+</figure>
+<h3>Timing and prompt</h3>
+<p>VLM commands last 1.0 s; SRU commands last 0.2 s. Simulation pauses during decisions, so compute latency does not consume the episode budget (90 s in ENV0/ENV1; 120 s in ENV3). Mapped ENV3 elevator runs use a shared depth/odometry-based transfer controller; the VLM pauses during this phase. The original VLM system prompt follows.</p>
+<details>
+<summary>Full system prompt</summary>
+<div class="promptbox">You are the pilot of a four-legged robot (Unitree Go2) indoors. You see only through one forward-facing RGB camera (640x480, about 95 degrees horizontal field of view, mounted about 0.7 m above the floor). You control the robot by choosing a velocity command at every decision.
+
+TASK
+You are given a GOAL IMAGE: a photo taken by this same camera at the target place. Drive to the place where the goal image was taken and face the same direction. The episode succeeds only if, when you declare done, the robot is within 0.5 m of that place and within 45 degrees of that heading. Declaring done anywhere else is a failure, and so is running out of time. Time is limited, so move efficiently, but do not rush the final alignment.
+
+SUBGOALS (only when a CURRENT SUBGOAL IMAGE is given)
+A subgoal image is a photo taken earlier, during a mapping run, along a route that leads toward the goal. Drive to where the subgoal image was taken. When you are within about 1 m of that spot and your view roughly matches it, set "subgoal_reached": true; you will then be given the next subgoal image, or no subgoal image when the goal is close. Subgoal images may be several meters apart and the next one may not be visible yet: head in the direction the route is going. The goal image is always the final target. When no subgoal image is given, always set "subgoal_reached": false.
+
+ACTIONS
+Each decision applies your command (vx, vy, wz) for exactly 1.0 second, then you decide again. The world is paused while you think.
+- vx: forward speed in m/s, from 0.0 to 0.8. The robot cannot move backward.
+- vy: sideways speed in m/s, from -0.3 to 0.3. Positive = to the robot's left.
+- wz: turning speed in rad/s, from -0.7 to 0.7. Positive = turn left (counter-clockwise).
+Measured effect of one decision: wz 0.3 turns about 14 degrees, wz 0.5 about 28 degrees, wz 0.7 about 41 degrees. vx 0.5 moves about 0.4 m, vx 0.8 about 0.7 m. A full turn in place takes about 9 decisions.
+Avoid collisions: if a wall or furniture fills the lower part of the view, turn or side-step instead of going forward. If the robot falls over, the episode fails. Near the goal, use small speeds to line up.
+
+WHAT YOU RECEIVE EACH DECISION
+- GOAL IMAGE, and CURRENT SUBGOAL IMAGE if any.
+- PAST FRAMES: up to 4 smaller (320x240) frames from 8, 4, 2 and 1 decisions ago, oldest first, labeled d-8 ... d-1. Use them to judge your own motion and to recognize places you have already seen.
+- CURRENT FRAME: what the camera sees now.
+- RECENT LOG: your last 15 commands (as executed) with the observation you wrote at each decision.
+- MEMORY: the note you wrote at the previous decision.
+- FEEDBACK: messages from the system, e.g. that your previous reply was invalid or that the subgoal changed.
+You get no map, no position and no depth. Rely on what you see.
+
+EXPLORING
+If the target is not in view, look around by turning in place, then go through doorways and along corridors toward areas you have not visited. Use MEMORY to avoid searching the same room twice.
+
+OUTPUT
+Reply with one JSON object only, with exactly these fields in this order:
+{"observation": string, at most 15 words: what you see now that matters;
+ "target_visible": boolean, true if the place in the current target image (the subgoal image if given, otherwise the goal image) is visible in the current frame;
+ "subgoal_reached": boolean, see SUBGOALS;
+ "done": boolean, true only when you are at the goal place facing the goal direction; this ends the episode;
+ "memory": string, at most 40 words: where you have been, where the goal probably is, your plan; it is shown back to you next decision;
+ "vx": number, "vy": number, "wz": number}
+When "done" is true the robot stops; your velocities are ignored.
+</div>
+</details>
+</section>
+<section id="results"><h2>Experiments and Results</h2><p>Five routes per environment, one run per method and route. All seven methods are reported below. Each environment has one matched B0/M5/M6 video comparison, with routes numbered R1–R5 locally.</p><p class="protocol">ENV0 and ENV1: 90 s. ENV3: 120 s. ENV1/ENV3 include uniformly re-evaluated B0/M1 results under the same scene budgets. ENV0 retains its historical final runs; cross-scene results are not a controlled version comparison.</p><div aria-label="Environment" class="env-tabs" role="tablist"><button aria-controls="env0" aria-selected="true" data-env="env0" id="tab-env0" role="tab">ENV0</button><button aria-controls="env1" aria-selected="false" data-env="env1" id="tab-env1" role="tab">ENV1</button><button aria-controls="env3" aria-selected="false" data-env="env3" id="tab-env3" role="tab">ENV3</button></div><div aria-labelledby="tab-env0" class="scene-panel" data-envpanel="env0" id="env0" role="tabpanel">
+<h3>ENV0 · Single-floor office</h3><figure class="scene-overview" id="figure-3"><img alt="ENV0: single-floor office with meeting rooms, an open office, a lobby and a lounge." loading="lazy" src="/assets/projects/vnav-benchmark/figures/env0_overview.png"/><figcaption><span class="figure-number">Figure 3. </span>ENV0: single-floor office with meeting rooms, an open office, a lobby and a lounge.</figcaption></figure><p>B0 and M2/M3/M6 complete all five routes. A sparse map with visual handoffs is not always better: M5 loses the route on the selected open-office example.</p>
+<div class="table-scroll"><table class="main-results" id="table-3"><caption><span class="table-number">Table 3. </span>ENV0 navigation results. 5 routes × 7 methods × 1 run · 90 s budget.</caption><thead><tr><th>ID</th><th>Success / 5</th><th>SPL ↑</th><th>Success time · s</th></tr></thead><tbody><tr><td>B0</td><td>5/5</td><td>0.975</td><td>20.7</td></tr><tr class=""><td>M1</td><td>2/5</td><td>0.390</td><td>23.1</td></tr><tr class=""><td>M2</td><td>5/5</td><td>0.841</td><td>37.2</td></tr><tr class=""><td>M3</td><td>5/5</td><td>0.807</td><td>41.6</td></tr><tr class=""><td>M4</td><td>4/5</td><td>0.720</td><td>28.5</td></tr><tr><td>M5</td><td>4/5</td><td>0.582</td><td>40.2</td></tr><tr><td>M6</td><td>5/5</td><td>0.700</td><td>44.4</td></tr></tbody></table></div><p class="protocol">SPL combines success and path efficiency (failures score zero); it is not a time metric. Time is the mean simulated time over successful runs only.</p>
+<h3>R5 · Open office</h3><p class="protocol">The same route, ordered B0, M5, M6. Replayed saved observations at 2.5× speed.</p><figure class="video-comparison" id="figure-4"><div class="video-grid"><div class="demo-card" id="demo-env0_b0_r5"><video aria-label="ENV0 R5 B0" controls="" playsinline="" poster="/assets/projects/vnav-benchmark/videos/env0_b0_r5.jpg" preload="none" src="/assets/projects/vnav-benchmark/videos/env0_b0_r5.mp4"></video><div class="demo-caption"><strong class="demo-title">B0 · R5</strong><span class="demo-meta">Success · 32.6 s</span>Follows the dense point-goal route to the open office.<br/><a href="/assets/projects/vnav-benchmark/videos/env0_b0_r5.mp4">Open video</a></div></div><div class="demo-card" id="demo-env0_m5_r5"><video aria-label="ENV0 R5 M5" controls="" playsinline="" poster="/assets/projects/vnav-benchmark/videos/env0_m5_r5.jpg" preload="none" src="/assets/projects/vnav-benchmark/videos/env0_m5_r5.mp4"></video><div class="demo-caption"><strong class="demo-title">M5 · R5</strong><span class="demo-meta">Timeout · 90.0 s</span>Loses the intended route after ambiguous visual subgoal matching and times out.<br/><a href="/assets/projects/vnav-benchmark/videos/env0_m5_r5.mp4">Open video</a></div></div><div class="demo-card" id="demo-env0_m6_r5"><video aria-label="ENV0 R5 M6" controls="" playsinline="" poster="/assets/projects/vnav-benchmark/videos/env0_m6_r5.jpg" preload="none" src="/assets/projects/vnav-benchmark/videos/env0_m6_r5.mp4"></video><div class="demo-caption"><strong class="demo-title">M6 · R5</strong><span class="demo-meta">Success · 60.0 s</span>Finds the open office from the final goal image without a map.<br/><a href="/assets/projects/vnav-benchmark/videos/env0_m6_r5.mp4">Open video</a></div></div></div><figcaption><span class="figure-number">Figure 4. </span>ENV0: B0, M5 and M6 navigation examples on the same route. Each video can be opened separately.</figcaption></figure>
+<details><summary>All five routes and individual outcomes</summary><div class="table-scroll"><table id="table-4"><caption><span class="table-number">Table 4. </span>ENV0 success by route.</caption><thead><tr><th>ID</th><th>R1</th><th>R2</th><th>R3</th><th>R4</th><th>R5</th></tr></thead><tbody><tr><td>B0</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>M1</td><td>—</td><td>✓</td><td>—</td><td>—</td><td>✓</td></tr><tr><td>M2</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>M3</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>M4</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>—</td></tr><tr><td>M5</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>—</td></tr><tr><td>M6</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr></tbody></table></div><p class="protocol">✓ success; — failure.</p><figure class="route-figure" id="figure-5"><a href="/assets/projects/vnav-benchmark/figures/env0_routes.png"><img alt="ENV0 R1–R5 recorded trajectories with Start and Goal legend" loading="lazy" src="/assets/projects/vnav-benchmark/figures/env0_routes.png"/></a><figcaption><span class="figure-number">Figure 5. </span>Start: circle. Goal: star. Dashed lines: failed runs. ENV3 is split into 1F and 2F.</figcaption></figure></details></div><div aria-labelledby="tab-env1" class="scene-panel" data-envpanel="env1" hidden="" id="env1" role="tabpanel">
+<h3>ENV1 · Garden and indoor–outdoor transitions</h3><figure class="scene-overview" id="figure-6"><img alt="ENV1: indoor–outdoor environment with a garden, pond, terrace and ramp." loading="lazy" src="/assets/projects/vnav-benchmark/figures/env1_overview.png"/><figcaption><span class="figure-number">Figure 6. </span>ENV1: indoor–outdoor environment with a garden, pond, terrace and ramp.</figcaption></figure><p>M1 and M2 complete all five routes; M5 completes four and M6 two. On the terrace route, visual control finds an approach that the dense point-goal baseline does not complete.</p>
+<div class="table-scroll"><table class="main-results" id="table-5"><caption><span class="table-number">Table 5. </span>ENV1 navigation results. 5 routes × 7 methods × 1 run · 90 s budget.</caption><thead><tr><th>ID</th><th>Success / 5</th><th>SPL ↑</th><th>Success time · s</th></tr></thead><tbody><tr><td>B0</td><td>3/5</td><td>0.595</td><td>38.3</td></tr><tr class=""><td>M1</td><td>5/5</td><td>0.898</td><td>36.3</td></tr><tr class=""><td>M2</td><td>5/5</td><td>0.956</td><td>41.6</td></tr><tr class=""><td>M3</td><td>1/5</td><td>0.124</td><td>24.0</td></tr><tr class=""><td>M4</td><td>3/5</td><td>0.584</td><td>33.3</td></tr><tr><td>M5</td><td>4/5</td><td>0.709</td><td>43.5</td></tr><tr><td>M6</td><td>2/5</td><td>0.265</td><td>41.0</td></tr></tbody></table></div><p class="protocol">SPL combines success and path efficiency (failures score zero); it is not a time metric. Time is the mean simulated time over successful runs only.</p>
+<h3>R2 · Terrace</h3><p class="protocol">The same route, ordered B0, M5, M6. Replayed saved observations at 2.5× speed.</p><figure class="video-comparison" id="figure-7"><div class="video-grid"><div class="demo-card" id="demo-env1_b0_r2"><video aria-label="ENV1 R2 B0" controls="" playsinline="" poster="/assets/projects/vnav-benchmark/videos/env1_b0_r2.jpg" preload="none" src="/assets/projects/vnav-benchmark/videos/env1_b0_r2.mp4"></video><div class="demo-caption"><strong class="demo-title">B0 · R2</strong><span class="demo-meta">Timeout · 90.0 s</span>Stalls below the raised terrace and times out.<br/><a href="/assets/projects/vnav-benchmark/videos/env1_b0_r2.mp4">Open video</a></div></div><div class="demo-card" id="demo-env1_m5_r2"><video aria-label="ENV1 R2 M5" controls="" playsinline="" poster="/assets/projects/vnav-benchmark/videos/env1_m5_r2.jpg" preload="none" src="/assets/projects/vnav-benchmark/videos/env1_m5_r2.mp4"></video><div class="demo-caption"><strong class="demo-title">M5 · R2</strong><span class="demo-meta">Success · 33.0 s</span>Uses the sparse image route and reaches the terrace.<br/><a href="/assets/projects/vnav-benchmark/videos/env1_m5_r2.mp4">Open video</a></div></div><div class="demo-card" id="demo-env1_m6_r2"><video aria-label="ENV1 R2 M6" controls="" playsinline="" poster="/assets/projects/vnav-benchmark/videos/env1_m6_r2.jpg" preload="none" src="/assets/projects/vnav-benchmark/videos/env1_m6_r2.mp4"></video><div class="demo-caption"><strong class="demo-title">M6 · R2</strong><span class="demo-meta">Success · 60.0 s</span>Identifies the ramp and adjusts around a chair; succeeds with a longer path.<br/><a href="/assets/projects/vnav-benchmark/videos/env1_m6_r2.mp4">Open video</a></div></div></div><figcaption><span class="figure-number">Figure 7. </span>ENV1: B0, M5 and M6 navigation examples on the same route. Each video can be opened separately.</figcaption></figure>
+<details><summary>All five routes and individual outcomes</summary><div class="table-scroll"><table id="table-6"><caption><span class="table-number">Table 6. </span>ENV1 success by route.</caption><thead><tr><th>ID</th><th>R1</th><th>R2</th><th>R3</th><th>R4</th><th>R5</th></tr></thead><tbody><tr><td>B0</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>M1</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>M2</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>M3</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>M4</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>✓</td></tr><tr><td>M5</td><td>✓</td><td>✓</td><td>✓</td><td>—</td><td>✓</td></tr><tr><td>M6</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div><p class="protocol">✓ success; — failure.</p><figure class="route-figure" id="figure-8"><a href="/assets/projects/vnav-benchmark/figures/env1_routes.png"><img alt="ENV1 R1–R5 recorded trajectories with Start and Goal legend" loading="lazy" src="/assets/projects/vnav-benchmark/figures/env1_routes.png"/></a><figcaption><span class="figure-number">Figure 8. </span>Start: circle. Goal: star. Dashed lines: failed runs. ENV3 is split into 1F and 2F.</figcaption></figure></details></div><div aria-labelledby="tab-env3" class="scene-panel" data-envpanel="env3" hidden="" id="env3" role="tabpanel">
+<h3>ENV3 · Two-floor office</h3><figure class="scene-overview" id="figure-9"><img alt="ENV3: two-floor office, with stairs and an elevator connecting the floors." loading="lazy" src="/assets/projects/vnav-benchmark/figures/env3_overview.png"/><figcaption><span class="figure-number">Figure 9. </span>ENV3: two-floor office, with stairs and an elevator connecting the floors.</figcaption></figure><p>M3 completes all five routes; B0/M2/M4/M5 complete four and M6 two. The selected elevator route contrasts an available cross-floor route with map-free exploration that remains on the first floor.</p>
+<div class="table-scroll"><table class="main-results" id="table-7"><caption><span class="table-number">Table 7. </span>ENV3 navigation results. 5 routes × 7 methods × 1 run · 120 s budget.</caption><thead><tr><th>ID</th><th>Success / 5</th><th>SPL ↑</th><th>Success time · s</th></tr></thead><tbody><tr><td>B0</td><td>4/5</td><td>0.792</td><td>19.2</td></tr><tr class=""><td>M1</td><td>2/5</td><td>0.385</td><td>10.0</td></tr><tr class=""><td>M2</td><td>4/5</td><td>0.748</td><td>45.0</td></tr><tr class=""><td>M3</td><td>5/5</td><td>0.927</td><td>44.8</td></tr><tr class=""><td>M4</td><td>4/5</td><td>0.629</td><td>49.1</td></tr><tr><td>M5</td><td>4/5</td><td>0.721</td><td>41.0</td></tr><tr><td>M6</td><td>2/5</td><td>0.329</td><td>26.0</td></tr></tbody></table></div><p class="protocol">SPL combines success and path efficiency (failures score zero); it is not a time metric. Time is the mean simulated time over successful runs only.</p>
+<h3>R3 · 2F open office via elevator</h3><p class="protocol">The same route, ordered B0, M5, M6. Replayed saved observations at 2.5× speed.</p><figure class="video-comparison" id="figure-10"><div class="video-grid"><div class="demo-card" id="demo-env3_b0_r3"><video aria-label="ENV3 R3 B0" controls="" playsinline="" poster="/assets/projects/vnav-benchmark/videos/env3_b0_r3.jpg" preload="none" src="/assets/projects/vnav-benchmark/videos/env3_b0_r3.mp4"></video><div class="demo-caption"><strong class="demo-title">B0 · R3</strong><span class="demo-meta">Success · 23.6 s</span>Uses the mapped route and shared elevator controller, then reaches the goal.<br/><a href="/assets/projects/vnav-benchmark/videos/env3_b0_r3.mp4">Open video</a></div></div><div class="demo-card" id="demo-env3_m5_r3"><video aria-label="ENV3 R3 M5" controls="" playsinline="" poster="/assets/projects/vnav-benchmark/videos/env3_m5_r3.jpg" preload="none" src="/assets/projects/vnav-benchmark/videos/env3_m5_r3.mp4"></video><div class="demo-caption"><strong class="demo-title">M5 · R3</strong><span class="demo-meta">Success · 29.2 s</span>Pauses VLM navigation for the shared elevator controller, then resumes visual navigation.<br/><a href="/assets/projects/vnav-benchmark/videos/env3_m5_r3.mp4">Open video</a></div></div><div class="demo-card" id="demo-env3_m6_r3"><video aria-label="ENV3 R3 M6" controls="" playsinline="" poster="/assets/projects/vnav-benchmark/videos/env3_m6_r3.jpg" preload="none" src="/assets/projects/vnav-benchmark/videos/env3_m6_r3.mp4"></video><div class="demo-caption"><strong class="demo-title">M6 · R3</strong><span class="demo-meta">Timeout · 120.0 s</span>Sees transit facilities but does not use them to reach the goal; remains on 1F and times out.<br/><a href="/assets/projects/vnav-benchmark/videos/env3_m6_r3.mp4">Open video</a></div></div></div><figcaption><span class="figure-number">Figure 10. </span>ENV3: B0, M5 and M6 navigation examples on the same route. Each video can be opened separately.</figcaption></figure>
+<details><summary>All five routes and individual outcomes</summary><div class="table-scroll"><table id="table-8"><caption><span class="table-number">Table 8. </span>ENV3 success by route.</caption><thead><tr><th>ID</th><th>R1</th><th>R2</th><th>R3</th><th>R4</th><th>R5</th></tr></thead><tbody><tr><td>B0</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>—</td></tr><tr><td>M1</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr><tr><td>M2</td><td>✓</td><td>✓</td><td>✓</td><td>—</td><td>✓</td></tr><tr><td>M3</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>M4</td><td>✓</td><td>✓</td><td>✓</td><td>—</td><td>✓</td></tr><tr><td>M5</td><td>✓</td><td>✓</td><td>✓</td><td>—</td><td>✓</td></tr><tr><td>M6</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div><p class="protocol">✓ success; — failure.</p><figure class="route-figure" id="figure-11"><a href="/assets/projects/vnav-benchmark/figures/env3_routes.png"><img alt="ENV3 R1–R5 recorded trajectories with Start and Goal legend" loading="lazy" src="/assets/projects/vnav-benchmark/figures/env3_routes.png"/></a><figcaption><span class="figure-number">Figure 11. </span>Start: circle. Goal: star. Dashed lines: failed runs. ENV3 is split into 1F and 2F.</figcaption></figure></details></div><p class="protocol">SPL uses each experiment's fixed reference path (shortest-path reference in ENV0; agreed route reference in ENV1/ENV3). Figures and videos add inspection labels only; they do not change method inputs. <a href="/assets/projects/vnav-benchmark/results.json">Download results and source hashes</a>.</p><h3 id="cost-latency">Token cost and decision latency</h3><figure id="figure-12"><a href="/assets/projects/vnav-benchmark/figures/latency_astra_only.png"><img alt="ENV0 mean compute time per decision, split into VLM processing, network or API, and framework time, with recorded token billing per episode and decision" loading="lazy" src="/assets/projects/vnav-benchmark/figures/latency_astra_only.png"/></a><figcaption><span class="figure-number">Figure 12. </span>Recorded ENV0 runs: mean compute time per decision on a logarithmic scale, with token billing in USD per episode and per decision. Each method runs five routes once. Costs are the actual billed API charges, including the Flex discount; SRU has no token charges. Latency includes provider queueing, while simulation pauses during decisions. Open the figure to inspect the labels.</figcaption></figure></section>
+<section id="discussion"><h2>Discussion</h2>
+<h3>1. Useful maps need executable transitions</h3>
+<p>Maps help when their keyframes and connections support an actionable route; more keyframes alone are not a general solution. Dense maps outperform sparse maps for SRU in ENV0 and ENV3, while the ordering reverses in ENV1. M5 succeeds on four of five routes in every scene, but M2/M3 are stronger in some settings. One revealing case is ENV3: M6 recognizes stairs and elevators yet remains on the first floor, whereas mapped elevator runs complete the transition with a shared transfer controller. This points to the value of route structure and execution support; success cannot be credited to the map or VLM alone.</p>
+<h3>2. Progress checks must match the navigation loop</h3>
+<p>Accurate localization does not guarantee a smooth interaction with a visual planner. On ENV3 R5, M2 keeps receiving the same subgoal image for 44 decisions despite repeatedly declaring arrival: the prompt promises a new image, while the pose gate retains the old one. Conversely, accepting visual arrival too early can skip a needed transition. These cases motivate a consistent handoff that combines recognizable landmarks, reachability and route progress, with clear feedback when a subgoal is not advanced. The current runs do not isolate which cue would resolve the failures.</p>
+<h3 id="autonomous-map-memory">3. Let the robot choose its map and memory</h3>
+<p>Choosing useful keyframes and deciding what to remember could reduce human intervention throughout navigation. Our exploratory variants select maps once per route (AM), memory at each step (AMem), or both (AMM). With the same keyframe count, AM improves ENV0 success from 4/5 to 5/5; AMem reduces mean input tokens per call by 22.5% across 15 routes, but needs more calls. Each variant succeeds on 10/15 routes versus 12/15 for historical M5. These signals motivate linking selection to execution feedback, progress checks and recovery, rather than assuming selection alone is sufficient. Online map reselection remains untested.</p>
+<p class="protocol">Scope: five routes per environment, one run per cell. ENV0 is a historical baseline; ENV1 and ENV3 use a later frozen version and different scene budgets. These observations do not establish statistical or causal effects.</p></section>
+<section id="references">
+<h2>References</h2>
+<ol class="refs">
+<li id="ref-1">[1] J. Jiao <em>et al.</em>, “LiteVLoc: Map-Lite Visual Localization for Image Goal
+      Navigation,” in <em>Proceedings of the IEEE International Conference on Robotics and Automation
+      (ICRA)</em>, 2025, pp. 5244–5251.
+      <a href="https://doi.org/10.1109/ICRA55743.2025.11128511">doi:10.1109/ICRA55743.2025.11128511</a>.</li>
+<li id="ref-2">[2] J. Jiao <em>et al.</em>, “OpenNavMap: Multi-Session Appearance-Based Topometric
+      Mapping for Scalable Visual Navigation,” <em>IEEE Transactions on Robotics</em>, 2026.
+      <a href="https://arxiv.org/abs/2601.12291">arXiv:2601.12291</a>.</li>
+<li id="ref-3">[3] OpenAI, “Safety overview: GPT-6 Astra,” Sep. 3, 2026. [Online]. Available:
+      <a href="https://openai.com/index/safety-overview-gpt-6-astra/">https://openai.com/index/safety-overview-gpt-6-astra/</a>.</li>
+<li id="ref-4">[4] F. Yang, P. Frivik, D. Hoeller, C. Wang, C. Cadena, and M. Hutter,
+      “Spatially-enhanced recurrent memory for long-range mapless navigation via end-to-end reinforcement
+      learning,” <em>The International Journal of Robotics Research</em>, vol. 45, no. 11,
+      pp. 1682–1706, 2026.
+      <a href="https://doi.org/10.1177/02783649251401926">doi:10.1177/02783649251401926</a>.</li>
+<li id="ref-5">[5] S. K. Ramakrishnan <em>et al.</em>, “Habitat-Matterport 3D Dataset (HM3D):
+      1000 Large-scale 3D Environments for Embodied AI,” in <em>Proceedings of the Neural Information
+      Processing Systems Track on Datasets and Benchmarks</em>, vol. 1, 2021. [Online]. Available:
+      <a href="https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/hash/34173cb38f07f89ddbebc2ac9128303f-Abstract-round2.html">NeurIPS proceedings</a>.</li>
+<li id="ref-6">[6] J. Krantz <em>et al.</em>, “Navigating to Objects Specified by Images,” in
+      <em>Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)</em>, 2023,
+      pp. 10916–10925. [Online]. Available:
+      <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Krantz_Navigating_to_Objects_Specified_by_Images_ICCV_2023_paper.html">CVF proceedings</a>.</li>
+<li id="ref-7">[7] T. Wu <em>et al.</em>, “Toward Reliable Sim-to-Real Predictability for MoE-based
+      Robust Quadrupedal Locomotion,” in <em>Robotics: Science and Systems (RSS)</em>, 2026.
+      [Online]. Available: <a href="https://robogauge.github.io/">Author project page</a>.</li>
+</ol>
+</section>
+<section id="acknowledgements">
+<h2>Acknowledgements</h2>
+<p>This benchmark and article were developed by Jianhao Jiao
+    (<a href="mailto:jiaojh1994@gmail.com">jiaojh1994@gmail.com</a>). The author thanks
+    Mr. Jincheng Wang, Mr. Jingwen Yu, and Dr. Runsheng Wang for helpful discussions.</p>
+</section>
+<footer>
+    Figures and videos rendered in NVIDIA Isaac Sim with a Unitree Go2.
+  </footer>
+</div>
+<script src="/assets/projects/vnav-benchmark/editorial.js"></script></body>
+</html>
+
+{% endraw %}
