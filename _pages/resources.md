@@ -7,7 +7,13 @@ nav: true
 nav_order: 4
 ---
 
-This page contains slides from invited talks and teaching materials.
+This page contains slides from invited talks, teaching materials, and my daily paper reading list.
+
+---
+
+## Daily Paper Reading
+
+[Daily Paper Radar](https://daily-paper-radar.pages.dev/) is a daily list of the **robotics and AI** papers I read and follow, each with a short plain-language explainer (motivation, method, results, and take-home messages).
 
 ---
 
