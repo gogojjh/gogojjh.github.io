@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Launched [Daily Paper Radar](https://daily-paper-radar.pages.dev/): the robotics and embodied-AI papers I read and follow each day, with short plain-language explainers. Feel free to browse.
+Launched [Daily Paper Radar](https://daily-paper-radar.pages.dev/), a daily list of the **robotics and AI** papers I read and follow, each with a short plain-language explainer. It is also linked as "Daily Paper" in the top menu.
