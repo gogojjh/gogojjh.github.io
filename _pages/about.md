@@ -38,6 +38,7 @@ I was fortunate to collaborate with some excellent researchers including
 I was the research associate in the Intelligent and Autonomous Driving Center (IADC) from 2022 to 2023, senior research fellow at University College London (UCL) from 2024 to 2025 (with <a href="https://profiles.ucl.ac.uk/73094-dimitrios-kanoulas">Prof. Dimitrios Kanoulas</a>), and senior research fellow at <a href="https://www.polyu.edu.hk/">The Hong Kong Polytechnic University (PolyU)</a> from January to June 2026 (with <a href="https://www.polyu.edu.hk/aae/people/academic-staff/dr-wen-weisong/">Prof. Weisong Wen</a>).
 
 More details regarding my previous/ongoing projects can be found on <a href="projects">Research Projects</a>. 
+The papers I usually read and follow are collected daily on <a href="https://daily-paper-radar.pages.dev/">Daily Paper Radar</a> (with short plain-language explainers). 
 Please feel free to contact <a href="mailto:jiaojh1994@gmail.com">me</a> (jiaojh1994 at gmail dot com) if you have questions about our projects and want collaboration.
 
 <!-- 
